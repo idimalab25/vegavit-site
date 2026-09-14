@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lambit2FA Privacy Policy — VEGAVIT EOOD</title>
+<meta name="description" content="Privacy policy of the lambit2FA application. VEGAVIT EOOD, Plovdiv, Bulgaria.">
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --text:#14181f; --text-soft:#5b6472;
+    --line:#e3e7ee; --accent:#1a5fd0;
+    --shadow:0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#10141b; --surface:#1a2029; --text:#e8ecf2; --text-soft:#97a1af;
+      --line:#29313d; --accent:#6ea8ff;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px}
+  .site-head{background:var(--surface);border-bottom:1px solid var(--line)}
+  .head-in{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--text)}
+  .logo span{color:var(--accent)}
+  .head-sp{flex:1}
+  .langs{display:flex;gap:6px}
+  .langs a{
+    border:1px solid var(--line);border-radius:20px;padding:5px 13px;
+    font-size:13px;color:var(--text-soft);text-decoration:none
+  }
+  .langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  main{padding:34px 0 60px}
+  .doc{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+       box-shadow:var(--shadow);padding:30px 28px 36px}
+  h1{font-size:28px;line-height:1.25;margin-bottom:10px}
+  h2{font-size:18px;margin:30px 0 10px}
+  p,ul{margin:10px 0}
+  ul{padding-left:22px}
+  li{margin:5px 0}
+  hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--bg)}
+  code{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:14px}
+  .meta{color:var(--text-soft);font-size:15px}
+  footer{border-top:1px solid var(--line);background:var(--surface);
+         color:var(--text-soft);font-size:14px;padding:18px 0}
+  @media (max-width:560px){ .doc{padding:22px 18px 28px} h1{font-size:24px} }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/">VEGA<span>VIT</span></a>
+    <div class="head-sp"></div>
+    <nav class="langs">
+      <a href="/lambit2fa/privacy/en/" class="on">EN</a>
+      <a href="/lambit2fa/privacy/bg/">BG</a>
+      <a href="/lambit2fa/privacy/">RU</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+<article class="doc">
+
+<h1>lambit2FA Privacy Policy</h1>
+<p class="meta"><strong>Effective date:</strong> 17 August 2026<br>
+<strong>Last updated:</strong> 14 September 2026</p>
+
+<hr>
+
+<h2>In short</h2>
+<p>lambit2FA <strong>collects no data at all</strong>. Neither personal nor anonymised,
+no analytics, no crash reports.</p>
+<p>Everything you add to the app stays on your device. If you turn
+synchronisation on, your devices exchange records through our server —
+encrypted in such a way that only you can read them. Until you turn it on,
+the app does not contact our server at all.</p>
+<p>The app goes online for two things: a clock check, no more than once
+a day (section 5), and synchronisation, if you have turned it on (section 6).</p>
+
+<hr>
+
+<h2>1. Who processes the data</h2>
+<p>Operator: <strong>VEGAVIT EOOD, ЕИК 207380781</strong><br>
+Address: ul. Pleven 6, Plovdiv 4000, Bulgaria (European Union)<br>
+E-mail: <a href="mailto:support@lambit.eu">support@lambit.eu</a></p>
+
+<hr>
+
+<h2>2. What data you enter into the app</h2>
+<p>To generate verification codes, the app stores:</p>
+<table>
+<thead><tr><th>Data</th><th>What for</th></tr></thead>
+<tbody>
+<tr><td>The account's secret key</td><td>The one-time code is computed from it</td></tr>
+<tr><td>Service name and login or email</td><td>So that you can tell your accounts apart</td></tr>
+<tr><td>Code settings: algorithm, length, period, counter</td><td>So that the code matches the one expected by the service</td></tr>
+<tr><td>App settings: theme, sorting, lock</td><td>Appearance and behaviour</td></tr>
+</tbody>
+</table>
+<p><strong>In readable form this data never leaves the device.</strong> We do not receive it,
+do not see it and cannot restore it. If synchronisation is on, it goes
+to our server encrypted — with a key we do not have (section 6).</p>
+
+<hr>
+
+<h2>3. Where it is stored</h2>
+<ul>
+<li><strong>iOS and macOS:</strong> in the system Keychain with the access level
+“after first unlock, this device only”. It follows that the data does
+<strong>not</strong> go into the iCloud backup and is <strong>not</strong> transferred
+to a new device automatically.</li>
+<li><strong>Android:</strong> in a local database encrypted with AES-256. The encryption key
+is held in the hardware-backed Android Keystore. Automatic upload
+to Google Drive is disabled (<code>allowBackup=false</code>).</li>
+</ul>
+
+<hr>
+
+<h2>4. What the app does NOT do</h2>
+<ul>
+<li>it does not send your codes and keys anywhere in readable form, including to us;</li>
+<li>it does not contact third-party services, apart from the clock check (section 5);</li>
+<li>it does not contact our server until you have turned synchronisation on;</li>
+<li>it does not use analytics, counters, advertising or tracking libraries;</li>
+<li>it does not collect crash reports;</li>
+<li>it does not read your address book, location, calendar, photos or call history;</li>
+<li>it does not show advertising;</li>
+<li>it does not share or sell data to third parties — there is nothing to share.</li>
+</ul>
+
+<hr>
+
+<h2>5. Going online: the clock check</h2>
+<p>A code is computed from the current time. A clock that has drifted produces
+codes that do not work, and the person concludes that the app is broken.
+That is why, occasionally — no more than once a day — the app asks several
+large websites (apple.com, google.com, duckduckgo.com, wikipedia.org,
+cloudflare.com) for the exact time and reads only the timestamp from the reply.</p>
+<p><strong>What leaves the device:</strong> the fact of the request itself, that is your
+network address, just as when opening any web page. No codes, no keys,
+no service names and no device identifiers are transmitted — the request
+contains nothing except the request.</p>
+<p><strong>Why these addresses:</strong> the phone contacts them constantly anyway,
+without us. Contacting them tells nothing new about you.</p>
+<p>The correction can be switched off: “Settings” → “Time” → “Do not apply correction”.</p>
+
+<hr>
+
+<h2>6. Synchronisation between devices</h2>
+<p>Synchronisation is off until you turn it on. While it is off, the app
+does not contact our server at all.</p>
+<p>If you have turned it on:</p>
+<ul>
+<li>a record goes to the server, encrypted on your device with a key
+that is created when you link your own devices to each other.
+The key stays on them and is not transmitted to us;</li>
+<li>the server sees only a set of bytes and a mailbox number computed from
+your key. It receives no name, no email and no device identifier —
+we do not have them;</li>
+<li><strong>the network address a request came from is not recorded.</strong> The request
+log is switched off deliberately. The address is needed by the network
+to deliver the reply and exists exactly as long as the request lasts;</li>
+<li>records expire by themselves: those older than 400 days are no longer
+served and are deleted by the server.</li>
+</ul>
+<p>There is no deletion on request — neither for you nor for us. The mailbox stops
+being filled when you switch synchronisation off, and expires by time.
+The cloud is not a replacement for a backup: it holds what your devices
+exchange, not an archive for the future.</p>
+
+<hr>
+
+<h2>7. Device permissions</h2>
+<p><strong>Camera</strong> — requested only when you press “Scan” yourself.
+It is used to recognise a QR code. The image is processed in memory
+and is neither saved nor transmitted anywhere.
+You may withhold the permission: the secret key can be typed in by hand.</p>
+<p><strong>Face ID, Touch ID, fingerprint</strong> — only to unlock the app.
+The check is performed by the operating system; the app receives only a
+“yes” or “no” answer and never has access to the biometric samples.</p>
+<p><strong>File access</strong> — only to the files you have selected yourself
+in the system dialog, and only to read or write a backup.</p>
+
+<hr>
+
+<h2>8. Backups</h2>
+<p>You create a backup yourself and decide yourself where to send it.</p>
+<p>The file is encrypted on the device <strong>before</strong> it leaves it: AES-256-CBC,
+the key is derived from your password with PBKDF2-HMAC-SHA256 and 10 000
+iterations, integrity is confirmed with HMAC-SHA256. The password is stored
+nowhere — neither on the device nor with us.</p>
+<p><strong>A forgotten password means the backup is lost for good.</strong> This is not a
+shortcoming but a direct consequence of the encryption being real: there is
+no way around it, neither for you nor for us.</p>
+<p>If you send the backup by email or through a messenger, the rules of the
+service you used apply to the transferred file. We have no influence over them.</p>
+
+<hr>
+
+<h2>9. Children</h2>
+<p>The app is not intended for children and collects no data about anyone,
+children included. The age rating is set because of the nature of the task,
+not because of the content.</p>
+
+<hr>
+
+<h2>10. Your rights</h2>
+<p>Secret keys, service names and settings are held on your device. We do not
+have them, therefore requesting access to them from us, their correction
+or deletion is not needed and is technically impossible.</p>
+<p>You can delete everything on the device yourself and instantly:
+“Settings” → “Delete all accounts”, or by removing the app from the device.</p>
+<p>If synchronisation is on, encrypted records from your devices are held
+on our server. We cannot read them, and there is nothing to link them to a
+person with: we receive no name, no email and no device identifier, and we
+do not record network addresses. There is no deletion of these records on
+request, neither for you nor for us (section 6); they expire by time.
+Switch synchronisation off and the mailbox will stop being filled.</p>
+<p>The rights under GDPR (EU), CCPA (California) and Federal Law 152-FZ (Russia)
+are honoured by the very way the matter is arranged: data by which a person
+could be identified does not arise on our side.</p>
+
+<hr>
+
+<h2>11. Changes to this policy</h2>
+<p>If the policy changes, the updated version will be published at this same
+address with a new date. Substantial changes are announced in the release
+notes before they take effect.</p>
+
+<hr>
+
+<h2>12. Contact</h2>
+<p>Questions about privacy and reports of vulnerabilities:
+<strong><a href="mailto:support@lambit.eu">support@lambit.eu</a></strong></p>
+<p>Please report vulnerabilities by email and do not publish them before
+a fix is released.</p>
+
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · Plovdiv, Bulgaria · <a href="/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>
