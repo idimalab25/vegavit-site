@@ -232,7 +232,7 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
 
 <section class="plat" id="shots">
   <h2>{esc(site_t['shots_title'])}</h2>
-  <div class="gallery">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="" width="277" height="600" loading="lazy">' for n in shots[1])}</div>
+  <div class="gallery">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="" width="277" height="600">' for n in shots[1])}</div>
 </section>
 </main>
 
