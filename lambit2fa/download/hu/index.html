@@ -73,8 +73,8 @@ pre.plain{white-space:pre-wrap;font-family:inherit;font-size:14px;color:var(--te
 .feats li{padding-inline-start:26px;position:relative}
 .feats li::before{content:"✓";position:absolute;inset-inline-start:0;top:3px;width:17px;height:17px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:700;text-align:center;line-height:17px}
 .gallery{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x mandatory}
-.gallery img{flex:0 0 auto;width:277px;height:600px;border-radius:14px;border:1px solid var(--line);background:#fff;scroll-snap-align:start}
-@media(max-width:560px){.gallery img{width:208px;height:450px}}
+.gallery img{flex:0 0 auto;height:600px;width:auto;max-width:none;border-radius:14px;border:1px solid var(--line);background:#fff;scroll-snap-align:start}
+@media(max-width:560px){.gallery img{height:450px}}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--text-soft)}
 @media(max-width:560px){h1{font-size:23px}.qr img{width:104px;height:104px}}</style>
 </head>
@@ -176,7 +176,7 @@ A letöltés ellenőrzése: sha256sum lambit2FA-1.1-linux-x86_64.AppImage — az
 
 <section class="plat" id="shots">
   <h2>Így néz ki</h2>
-  <div class="gallery"><img src="/lambit2fa/download/shots/en/01-codes.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/02-copied.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/02-groups.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/03-backups.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/03-empty.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/04-settings.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/05-import.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/06-export.jpg" alt="" width="277" height="600"><img src="/lambit2fa/download/shots/en/07-codes-dark.jpg" alt="" width="277" height="600"></div>
+  <div class="gallery"><img src="/lambit2fa/download/shots/en/01-codes.jpg" alt=""><img src="/lambit2fa/download/shots/en/02-copied.jpg" alt=""><img src="/lambit2fa/download/shots/en/02-groups.jpg" alt=""><img src="/lambit2fa/download/shots/en/03-backups.jpg" alt=""><img src="/lambit2fa/download/shots/en/03-empty.jpg" alt=""><img src="/lambit2fa/download/shots/en/04-settings.jpg" alt=""><img src="/lambit2fa/download/shots/en/05-import.jpg" alt=""><img src="/lambit2fa/download/shots/en/06-export.jpg" alt=""><img src="/lambit2fa/download/shots/en/07-codes-dark.jpg" alt=""></div>
 </section>
 </main>
 

@@ -92,8 +92,8 @@ pre.plain{white-space:pre-wrap;font-family:inherit;font-size:14px;color:var(--te
 .feats li{padding-inline-start:26px;position:relative}
 .feats li::before{content:"✓";position:absolute;inset-inline-start:0;top:3px;width:17px;height:17px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:700;text-align:center;line-height:17px}
 .gallery{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x mandatory}
-.gallery img{flex:0 0 auto;width:277px;height:600px;border-radius:14px;border:1px solid var(--line);background:#fff;scroll-snap-align:start}
-@media(max-width:560px){.gallery img{width:208px;height:450px}}
+.gallery img{flex:0 0 auto;height:600px;width:auto;max-width:none;border-radius:14px;border:1px solid var(--line);background:#fff;scroll-snap-align:start}
+@media(max-width:560px){.gallery img{height:450px}}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--text-soft)}
 @media(max-width:560px){h1{font-size:23px}.qr img{width:104px;height:104px}}"""
 
@@ -232,7 +232,7 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
 
 <section class="plat" id="shots">
   <h2>{esc(site_t['shots_title'])}</h2>
-  <div class="gallery">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="" width="277" height="600">' for n in shots[1])}</div>
+  <div class="gallery">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="">' for n in shots[1])}</div>
 </section>
 </main>
 
