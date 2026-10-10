@@ -20,5 +20,10 @@
   "fName": "公司",
   "fReg": "注册号",
   "fAddr": "地址",
-  "fMail": "电子邮件"
+  "fMail": "电子邮件",
+  "f_sync": "跨所有平台的云同步",
+  "f_nologin": "无需登录",
+  "f_anon": "完全匿名",
+  "f_watch": "智能手表上的验证码",
+  "shots_title": "应用界面"
 }

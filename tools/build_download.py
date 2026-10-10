@@ -73,7 +73,7 @@ a:hover{text-decoration:underline}
 main{padding:34px 0 60px}
 h1{font-size:28px;line-height:1.25;margin-bottom:10px}
 .intro{color:var(--text-soft);max-width:640px;margin-bottom:8px}
-.hint{color:var(--text-soft);font-size:13px;margin-bottom:26px}
+.hint{color:var(--text-soft);font-size:13px;margin-bottom:10px}
 section.plat{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px;scroll-margin-top:16px}
 section.plat h2{font-size:18px;margin-bottom:12px}
 .row{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
@@ -88,6 +88,12 @@ section.plat h2{font-size:18px;margin-bottom:12px}
 .files .sha{display:block;color:var(--text-soft);font-size:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .note{font-size:13px;color:var(--text-soft);margin-top:10px}
 pre.plain{white-space:pre-wrap;font-family:inherit;font-size:14px;color:var(--text-soft);margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.feats{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:5px;font-size:15px}
+.feats li{padding-inline-start:26px;position:relative}
+.feats li::before{content:"✓";position:absolute;inset-inline-start:0;top:3px;width:17px;height:17px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:700;text-align:center;line-height:17px}
+.gallery{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x mandatory}
+.gallery img{flex:0 0 auto;width:277px;height:600px;border-radius:14px;border:1px solid var(--line);background:#fff;scroll-snap-align:start}
+@media(max-width:560px){.gallery img{width:208px;height:450px}}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--text-soft)}
 @media(max-width:560px){h1{font-size:23px}.qr img{width:104px;height:104px}}"""
 
@@ -114,7 +120,7 @@ def files_block(files, sha_hint):
     return f'<p class="note">{esc(sha_hint)}</p><ul class="files">{items}</ul>'
 
 
-def page(code, t, linux_text, have, priv_label):
+def page(code, t, linux_text, have, priv_label, site_t, shots):
     tag = TAG.get(code, code)
     dir_attr = ' dir="rtl"' if code in RTL else ''
     alts = '\n'.join(
@@ -215,8 +221,19 @@ def page(code, t, linux_text, have, priv_label):
   <h1>{esc(t['download_title'])}</h1>
   <p class="intro">{esc(t['download_intro'])}</p>
   <p class="hint">{esc(t['plaque_text'])}</p>
+  <ul class="feats">
+    <li>{esc(site_t['f_sync'])}</li>
+    <li>{esc(site_t['f_nologin'])}</li>
+    <li>{esc(site_t['f_anon'])}</li>
+    <li>{esc(site_t['f_watch'])}</li>
+  </ul>
 
 {chr(10).join(blocks)}
+
+<section class="plat" id="shots">
+  <h2>{esc(site_t['shots_title'])}</h2>
+  <div class="gallery">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="" width="277" height="600" loading="lazy">' for n in shots[1])}</div>
+</section>
 </main>
 
 <footer>
@@ -263,9 +280,13 @@ def main():
         linux_text = (src / 'listing-linux' / f'{code}.txt').read_text(encoding='utf-8')
         # подпись ссылки на политику — из перевода сайта, на языке страницы
         site_t = json.loads((out / 'i18n' / f'{code}.json').read_text(encoding='utf-8'))
+        # скриншоты из App Store: локализованный набор, если он есть, иначе английский
+        shots_dir = out / 'lambit2fa' / 'download' / 'shots'
+        lang_dir = code if any((shots_dir / code).glob('*.jpg')) else 'en'
+        shots = (lang_dir, sorted(f.name for f in (shots_dir / lang_dir).glob('*.jpg')))
         d = out / 'lambit2fa' / 'download' / ('' if code == DEFAULT_LANG else code)
         d.mkdir(parents=True, exist_ok=True)
-        (d / 'index.html').write_text(page(code, strings[code], linux_text, have, site_t['privLink']), encoding='utf-8')
+        (d / 'index.html').write_text(page(code, strings[code], linux_text, have, site_t['privLink'], site_t, shots), encoding='utf-8')
     print(f'собрано страниц: {len(NAMES)}')
 
 

@@ -164,6 +164,11 @@
   :lang(ko) { font-family: "Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif; }
   :lang(hi) { font-family: "Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif; }
   :lang(ar) { font-family: "SF Arabic","Geeza Pro",Tahoma,"Noto Sans Arabic",sans-serif; }
+
+  /* тезисы lambit2FA */
+  .feats { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 5px; font-size: 14px; }
+  .feats li { padding-inline-start: 24px; position: relative; }
+  .feats li::before { content: "✓"; position: absolute; inset-inline-start: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 10px; font-weight: 700; text-align: center; line-height: 16px; }
 </style>
 </head>
 <body data-theme="light">
@@ -198,6 +203,12 @@
         <a class="plaque-main" href="/lambit2fa/download/fr/">
           <h3>lambit2FA — codes de connexion à deux facteurs</h3>
           <p>Disponible sur toutes les plateformes : iPhone, iPad, Apple Watch, Mac, Android, montres Wear OS, Windows, Linux. Vos codes restent chez vous.</p>
+          <ul class="feats">
+            <li>Synchronisation cloud entre toutes les plateformes</li>
+            <li>Pas de connexion</li>
+            <li>Anonymat complet</li>
+            <li>Vos codes sur votre montre connectée</li>
+          </ul>
           <span class="dl-btn">Télécharger</span>
         </a>
         <div class="qrs"><div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad et Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad et Apple Watch — App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android et montres Wear OS — Google Play" width="104" height="104"><span>Android et montres Wear OS — Google Play</span></div></div>

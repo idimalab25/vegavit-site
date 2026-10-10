@@ -20,5 +20,10 @@
   "fName": "Yritys",
   "fReg": "Rekisterinumero",
   "fAddr": "Osoite",
-  "fMail": "Sähköposti"
+  "fMail": "Sähköposti",
+  "f_sync": "Pilvisynkronointi kaikkien alustojen välillä",
+  "f_nologin": "Ei kirjautumista",
+  "f_anon": "Täysi nimettömyys",
+  "f_watch": "Koodit älykellossasi",
+  "shots_title": "Miltä se näyttää"
 }

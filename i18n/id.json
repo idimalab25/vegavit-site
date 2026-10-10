@@ -20,5 +20,10 @@
   "fName": "Perusahaan",
   "fReg": "Nomor registrasi",
   "fAddr": "Alamat",
-  "fMail": "Email"
+  "fMail": "Email",
+  "f_sync": "Sinkronisasi cloud di semua platform",
+  "f_nologin": "Tanpa login",
+  "f_anon": "Anonimitas penuh",
+  "f_watch": "Kode di jam tangan pintar Anda",
+  "shots_title": "Seperti apa tampilannya"
 }

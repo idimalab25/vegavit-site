@@ -54,7 +54,7 @@ a:hover{text-decoration:underline}
 main{padding:34px 0 60px}
 h1{font-size:28px;line-height:1.25;margin-bottom:10px}
 .intro{color:var(--text-soft);max-width:640px;margin-bottom:8px}
-.hint{color:var(--text-soft);font-size:13px;margin-bottom:26px}
+.hint{color:var(--text-soft);font-size:13px;margin-bottom:10px}
 section.plat{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:20px 22px;margin-bottom:16px;scroll-margin-top:16px}
 section.plat h2{font-size:18px;margin-bottom:12px}
 .row{display:flex;gap:18px;align-items:flex-start;flex-wrap:wrap}
@@ -69,6 +69,12 @@ section.plat h2{font-size:18px;margin-bottom:12px}
 .files .sha{display:block;color:var(--text-soft);font-size:12px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
 .note{font-size:13px;color:var(--text-soft);margin-top:10px}
 pre.plain{white-space:pre-wrap;font-family:inherit;font-size:14px;color:var(--text-soft);margin-top:12px;padding-top:12px;border-top:1px solid var(--line)}
+.feats{list-style:none;margin:0 0 26px;padding:0;display:grid;gap:5px;font-size:15px}
+.feats li{padding-inline-start:26px;position:relative}
+.feats li::before{content:"✓";position:absolute;inset-inline-start:0;top:3px;width:17px;height:17px;border-radius:50%;background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:700;text-align:center;line-height:17px}
+.gallery{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 10px;scroll-snap-type:x mandatory}
+.gallery img{flex:0 0 auto;width:277px;height:600px;border-radius:14px;border:1px solid var(--line);background:#fff;scroll-snap-align:start}
+@media(max-width:560px){.gallery img{width:208px;height:450px}}
 footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--text-soft)}
 @media(max-width:560px){h1{font-size:23px}.qr img{width:104px;height:104px}}</style>
 </head>
@@ -86,6 +92,12 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color
   <h1>lambit2FA 다운로드</h1>
   <p class="intro">기기를 선택하세요. 모든 플랫폼에 하나의 앱, 코드는 나에게만 저장, 클라우드는 선택.</p>
   <p class="hint">모든 플랫폼에서 사용 가능: iPhone, iPad, Apple Watch, Mac, Android, Wear OS 시계, Windows, Linux. 코드는 내 손에만.</p>
+  <ul class="feats">
+    <li>모든 플랫폼 간 클라우드 동기화</li>
+    <li>로그인 없음</li>
+    <li>완전한 익명성</li>
+    <li>스마트워치에서 코드 확인</li>
+  </ul>
 
 <section class="plat" id="iphone">
   <h2>iPhone, iPad, Apple Watch — App Store</h2>
@@ -160,6 +172,11 @@ Ubuntu 22.04 이상, Debian 12 이상, Linux Mint 21 이상, Pop!_OS 22.04 이�
 Wayland에서 화면의 QR 코드를 읽으려면 스크린샷 도구(gnome-screenshot, spectacle, grim)가 필요합니다. 없으면 직접 스크린샷을 찍어 앱에서 이미지로 여세요.
 
 내려받은 파일 확인: sha256sum lambit2FA-1.1-linux-x86_64.AppImage — 결과가 옆의 .sha256 파일과 일치해야 합니다.</pre>
+</section>
+
+<section class="plat" id="shots">
+  <h2>앱 화면</h2>
+  <div class="gallery"><img src="/lambit2fa/download/shots/ko/01-codes.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/02-copied.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/02-groups.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/03-backups.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/03-empty.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/04-settings.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/05-import.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/06-export.jpg" alt="" width="277" height="600" loading="lazy"><img src="/lambit2fa/download/shots/ko/07-codes-dark.jpg" alt="" width="277" height="600" loading="lazy"></div>
 </section>
 </main>
 

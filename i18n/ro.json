@@ -20,5 +20,10 @@
   "fName": "Companie",
   "fReg": "Număr de înregistrare",
   "fAddr": "Adresă",
-  "fMail": "E-mail"
+  "fMail": "E-mail",
+  "f_sync": "Sincronizare în cloud între toate platformele",
+  "f_nologin": "Fără autentificare",
+  "f_anon": "Anonimat complet",
+  "f_watch": "Coduri pe ceasul tău inteligent",
+  "shots_title": "Cum arată"
 }

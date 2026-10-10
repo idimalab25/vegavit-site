@@ -20,5 +20,10 @@
   "fName": "Şirket",
   "fReg": "Sicil numarası",
   "fAddr": "Adres",
-  "fMail": "E-posta"
+  "fMail": "E-posta",
+  "f_sync": "Tüm platformlar arasında bulut eşitleme",
+  "f_nologin": "Giriş yok",
+  "f_anon": "Tam anonimlik",
+  "f_watch": "Akıllı saatinizde kodlar",
+  "shots_title": "Nasıl görünüyor"
 }

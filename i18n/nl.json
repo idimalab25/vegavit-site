@@ -20,5 +20,10 @@
   "fName": "Bedrijf",
   "fReg": "Registratienummer",
   "fAddr": "Adres",
-  "fMail": "E-mail"
+  "fMail": "E-mail",
+  "f_sync": "Cloudsynchronisatie tussen alle platforms",
+  "f_nologin": "Geen login",
+  "f_anon": "Volledige anonimiteit",
+  "f_watch": "Codes op je smartwatch",
+  "shots_title": "Zo ziet het eruit"
 }

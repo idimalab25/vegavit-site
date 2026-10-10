@@ -164,6 +164,11 @@
   :lang(ko) { font-family: "Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif; }
   :lang(hi) { font-family: "Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif; }
   :lang(ar) { font-family: "SF Arabic","Geeza Pro",Tahoma,"Noto Sans Arabic",sans-serif; }
+
+  /* тезисы lambit2FA */
+  .feats { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 5px; font-size: 14px; }
+  .feats li { padding-inline-start: 24px; position: relative; }
+  .feats li::before { content: "✓"; position: absolute; inset-inline-start: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 10px; font-weight: 700; text-align: center; line-height: 16px; }
 </style>
 </head>
 <body data-theme="light">
@@ -198,6 +203,12 @@
         <a class="plaque-main" href="/lambit2fa/download/tr/">
           <h3>lambit2FA — iki aşamalı giriş kodları</h3>
           <p>Tüm platformlarda: iPhone, iPad, Apple Watch, Mac, Android, Wear OS saatler, Windows, Linux. Kodlarınız sizde kalır.</p>
+          <ul class="feats">
+            <li>Tüm platformlar arasında bulut eşitleme</li>
+            <li>Giriş yok</li>
+            <li>Tam anonimlik</li>
+            <li>Akıllı saatinizde kodlar</li>
+          </ul>
           <span class="dl-btn">İndir</span>
         </a>
         <div class="qrs"><div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad ve Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad ve Apple Watch — App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android ve Wear OS saatler — Google Play" width="104" height="104"><span>Android ve Wear OS saatler — Google Play</span></div></div>

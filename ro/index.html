@@ -164,6 +164,11 @@
   :lang(ko) { font-family: "Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif; }
   :lang(hi) { font-family: "Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif; }
   :lang(ar) { font-family: "SF Arabic","Geeza Pro",Tahoma,"Noto Sans Arabic",sans-serif; }
+
+  /* тезисы lambit2FA */
+  .feats { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 5px; font-size: 14px; }
+  .feats li { padding-inline-start: 24px; position: relative; }
+  .feats li::before { content: "✓"; position: absolute; inset-inline-start: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 10px; font-weight: 700; text-align: center; line-height: 16px; }
 </style>
 </head>
 <body data-theme="light">
@@ -198,6 +203,12 @@
         <a class="plaque-main" href="/lambit2fa/download/ro/">
           <h3>lambit2FA — coduri de autentificare în doi pași</h3>
           <p>Disponibil pe toate platformele: iPhone, iPad, Apple Watch, Mac, Android, ceasuri Wear OS, Windows, Linux. Codurile rămân la dvs.</p>
+          <ul class="feats">
+            <li>Sincronizare în cloud între toate platformele</li>
+            <li>Fără autentificare</li>
+            <li>Anonimat complet</li>
+            <li>Coduri pe ceasul tău inteligent</li>
+          </ul>
           <span class="dl-btn">Descărcați</span>
         </a>
         <div class="qrs"><div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad și Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad și Apple Watch — App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android și ceasuri Wear OS — Google Play" width="104" height="104"><span>Android și ceasuri Wear OS — Google Play</span></div></div>

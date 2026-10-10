@@ -29,5 +29,10 @@
   "fAddr": "Address",
   "fDir": "Manager",
   "fMail": "E-mail",
-  "fPhone": "Phone"
+  "fPhone": "Phone",
+  "f_sync": "Cloud sync across all platforms",
+  "f_nologin": "No login",
+  "f_anon": "Complete anonymity",
+  "f_watch": "Codes on your smartwatch",
+  "shots_title": "What it looks like"
 }

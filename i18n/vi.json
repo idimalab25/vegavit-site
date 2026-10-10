@@ -20,5 +20,10 @@
   "fName": "Công ty",
   "fReg": "Số đăng ký",
   "fAddr": "Địa chỉ",
-  "fMail": "Email"
+  "fMail": "Email",
+  "f_sync": "Đồng bộ đám mây giữa mọi nền tảng",
+  "f_nologin": "Không cần đăng nhập",
+  "f_anon": "Hoàn toàn ẩn danh",
+  "f_watch": "Mã trên đồng hồ thông minh của bạn",
+  "shots_title": "Giao diện ứng dụng"
 }

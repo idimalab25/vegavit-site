@@ -40,7 +40,7 @@ QR_APK = ('android-apk', 'p_apk')
 # Проекты: адреса не переводятся, тексты — ключами из i18n.
 # Ключи, которые обязан дать перевод сайта. Надписи плашки и подписи QR
 # сюда не входят: они приходят из site_strings.json проекта приложения.
-SITE_KEYS = ('heroTitle', 'heroText', 'projTitle', 'p1', 'p2', 'p3', 'p4', 'p5', 'plat',
+SITE_KEYS = ('f_sync', 'f_nologin', 'f_anon', 'f_watch', 'shots_title', 'heroTitle', 'heroText', 'projTitle', 'p1', 'p2', 'p3', 'p4', 'p5', 'plat',
              'mfgTitle', 'mfgName', 'mfgText', 'aboutTitle', 'foot', 'privLink',
              'fName', 'fReg', 'fVat', 'fAddr', 'fDir', 'fMail', 'fPhone')
 
@@ -139,6 +139,12 @@ def page(code, t, s, css):
         <a class="plaque-main" href="/lambit2fa/download/{'' if code == DEFAULT_LANG else code + '/'}">
           <h3>{esc(s['plaque_title'])}</h3>
           <p>{esc(s['plaque_text'])}</p>
+          <ul class="feats">
+            <li>{esc(t['f_sync'])}</li>
+            <li>{esc(t['f_nologin'])}</li>
+            <li>{esc(t['f_anon'])}</li>
+            <li>{esc(t['f_watch'])}</li>
+          </ul>
           <span class="dl-btn">{esc(s['plaque_button'])}</span>
         </a>
         <div class="qrs">{qrs}</div>

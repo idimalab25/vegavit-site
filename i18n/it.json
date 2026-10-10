@@ -20,5 +20,10 @@
   "fName": "Società",
   "fReg": "Numero di registrazione",
   "fAddr": "Indirizzo",
-  "fMail": "E-mail"
+  "fMail": "E-mail",
+  "f_sync": "Sincronizzazione cloud tra tutte le piattaforme",
+  "f_nologin": "Nessun login",
+  "f_anon": "Anonimato completo",
+  "f_watch": "Codici sul tuo smartwatch",
+  "shots_title": "Come si presenta"
 }
