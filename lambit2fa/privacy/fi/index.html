@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lambit2FA:n tietosuojakäytäntö — VEGAVIT EOOD</title>
+<meta name="description" content="lambit2FA-sovelluksen tietosuojakäytäntö. VEGAVIT EOOD, Plovdiv, Bulgaria.">
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --text:#14181f; --text-soft:#5b6472;
+    --line:#e3e7ee; --accent:#1a5fd0;
+    --shadow:0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#10141b; --surface:#1a2029; --text:#e8ecf2; --text-soft:#97a1af;
+      --line:#29313d; --accent:#6ea8ff;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px}
+  .site-head{background:var(--surface);border-bottom:1px solid var(--line)}
+  .head-in{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--text)}
+  .logo span{color:var(--accent)}
+  .head-sp{flex:1}
+  .langs{display:flex;gap:6px}
+  .langs a{
+    border:1px solid var(--line);border-radius:20px;padding:5px 13px;
+    font-size:13px;color:var(--text-soft);text-decoration:none
+  }
+  .langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  main{padding:34px 0 60px}
+  .doc{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+       box-shadow:var(--shadow);padding:30px 28px 36px}
+  h1{font-size:28px;line-height:1.25;margin-bottom:10px}
+  h2{font-size:18px;margin:30px 0 10px}
+  p,ul{margin:10px 0}
+  ul{padding-left:22px}
+  li{margin:5px 0}
+  hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--bg)}
+  code{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:14px}
+  .meta{color:var(--text-soft);font-size:15px}
+  footer{border-top:1px solid var(--line);background:var(--surface);
+         color:var(--text-soft);font-size:14px;padding:18px 0}
+  @media (max-width:560px){ .doc{padding:22px 18px 28px} h1{font-size:24px} }
+
+.getapp{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:20px 22px;margin:30px 0 10px}
+.getapp h2{font-size:17px;margin-bottom:6px}
+.getapp p{color:var(--text-soft);font-size:14px;margin-bottom:12px}
+.getapp .qrs{display:flex;gap:12px;flex-wrap:wrap}
+.getapp .qr{width:104px;text-align:center;font-size:11.5px;color:var(--text-soft);line-height:1.3}
+.getapp .qr img{display:block;width:104px;height:104px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px}
+.getapp .qr span{display:block;margin-top:5px}
+.getapp .dl-btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;border-radius:9px;padding:9px 18px;font-size:14px;font-weight:600}
+.getapp .dl-btn:hover{text-decoration:none;opacity:.9}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/fi/" dir="ltr">VEGA<span>VIT</span></a>
+    <div class="head-sp"></div>
+    <nav class="langs"><a href="/lambit2fa/privacy/en/">EN</a><a href="/lambit2fa/privacy/">RU</a><a href="/lambit2fa/privacy/es/">ES</a><a href="/lambit2fa/privacy/ar/">AR</a><a href="/lambit2fa/privacy/de/">DE</a><a href="/lambit2fa/privacy/pt/">PT</a><a href="/lambit2fa/privacy/zh/">ZH</a><a href="/lambit2fa/privacy/fi/" class="on">FI</a><a href="/lambit2fa/privacy/fr/">FR</a><a href="/lambit2fa/privacy/nl/">NL</a><a href="/lambit2fa/privacy/id/">ID</a><a href="/lambit2fa/privacy/hi/">HI</a><a href="/lambit2fa/privacy/ja/">JA</a><a href="/lambit2fa/privacy/ko/">KO</a><a href="/lambit2fa/privacy/tr/">TR</a><a href="/lambit2fa/privacy/vi/">VI</a><a href="/lambit2fa/privacy/it/">IT</a><a href="/lambit2fa/privacy/pl/">PL</a><a href="/lambit2fa/privacy/ro/">RO</a><a href="/lambit2fa/privacy/el/">EL</a><a href="/lambit2fa/privacy/hu/">HU</a><a href="/lambit2fa/privacy/bg/">BG</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article class="doc">
+<h1>lambit2FA:n tietosuojakäytäntö</h1>
+<p class="meta"><strong>Voimaantulopäivä:</strong> 17. elokuuta 2026<br>
+<strong>Viimeksi päivitetty:</strong> 14. syyskuuta 2026</p>
+<hr>
+<h2>Lyhyesti</h2>
+<p>lambit2FA <strong>ei kerää sinusta mitään tietoja</strong>: ei henkilötietoja,
+ei anonymisoituja tilastoja, ei analytiikkaa, ei kaatumisraportteja.</p>
+<p>Kaikki, mitä lisäät sovellukseen, pysyy laitteellasi. Jos otat
+synkronoinnin käyttöön, laitteesi vaihtavat tietueita palvelimemme kautta.
+Ne tietueet on salattu omalla avaimellasi: emme voi lukea niitä emmekä
+tiedä, kenen ne ovat. Kun synkronointi on pois päältä, sovellus
+ei ota palvelimeemme lainkaan yhteyttä.</p>
+<p>Sovellus menee verkkoon kahdesta syystä: kellon tarkistukseen, enintään kerran
+päivässä (kohta 5), ja synkronointiin, jos olet ottanut sen käyttöön (kohta 6).</p>
+<hr>
+<h2>1. Kuka käsittelee tietoja</h2>
+<p>Rekisterinpitäjä: <strong>VEGAVIT EOOD, ЕИК 207380781</strong><br>
+Osoite: ul. Pleven 6, Plovdiv 4000, Bulgaria (Euroopan unioni)<br>
+Sähköposti: <a href="mailto:support@lambit.eu">support@lambit.eu</a></p>
+<hr>
+<h2>2. Mitä tietoja syötät sovellukseen</h2>
+<p>Vahvistuskoodien tuottamiseksi sovellus tallentaa:</p>
+<table>
+<thead><tr><th>Tieto</th><th>Mihin</th></tr></thead>
+<tbody>
+<tr><td>Tilin salainen avain</td><td>Siitä lasketaan kertakäyttöinen koodi</td></tr>
+<tr><td>Palvelun nimi ja tunnus tai sähköposti</td><td>Jotta erotat tilisi toisistaan</td></tr>
+<tr><td>Koodin asetukset: algoritmi, pituus, jakso, laskuri</td><td>Jotta koodi vastaa palvelun odottamaa</td></tr>
+<tr><td>Sovelluksen asetukset: teema, lajittelu, lukitus</td><td>Ulkoasu ja toiminta</td></tr>
+</tbody>
+</table>
+<p><strong>Luettavassa muodossa nämä tiedot eivät koskaan poistu laitteelta.</strong> Emme saa niitä,
+emme näe niitä emmekä voi palauttaa niitä. Jos synkronointi on käytössä, ne lähtevät
+palvelimellemme salattuina — avaimella, jota meillä ei ole (kohta 6).</p>
+<hr>
+<h2>3. Missä ne säilytetään</h2>
+<ul>
+<li><strong>iOS ja macOS:</strong> järjestelmän avainnipussa (Keychain) käyttöoikeustasolla
+”ensimmäisen lukituksen avauksen jälkeen, vain tämä laite”. Siitä seuraa, että tiedot
+<strong>eivät</strong> mene iCloud-varmuuskopioon eivätkä siirry <strong>automaattisesti</strong>
+uudelle laitteelle.</li>
+<li><strong>Android:</strong> paikallisessa, AES-256:lla salatussa tietokannassa. Salausavain
+on laitteistopohjaisessa Android Keystoressa. Automaattinen lähetys
+Google Driveen on pois käytöstä (<code>allowBackup=false</code>).</li>
+</ul>
+<hr>
+<h2>4. Mitä sovellus EI tee</h2>
+<ul>
+<li>se ei lähetä koodejasi ja avaimiasi minnekään luettavassa muodossa, ei myöskään meille;</li>
+<li>se ei ota yhteyttä kolmansien osapuolten palveluihin kellon tarkistusta lukuun ottamatta (kohta 5);</li>
+<li>se ei ota yhteyttä palvelimeemme ennen kuin olet ottanut synkronoinnin käyttöön;</li>
+<li>se ei käytä analytiikkaa, laskureita eikä mainos- tai seurantakirjastoja;</li>
+<li>se ei kerää kaatumisraportteja;</li>
+<li>se ei lue osoitekirjaa, sijaintia, kalenteria, kuvia eikä puheluhistoriaa;</li>
+<li>se ei näytä mainoksia;</li>
+<li>se ei jaa eikä myy tietoja kolmansille osapuolille: meillä ei ole sinusta
+luettavia tietoja.</li>
+</ul>
+<hr>
+<h2>5. Verkkoon meneminen: kellon tarkistus</h2>
+<p>Koodi lasketaan nykyisestä ajasta. Jätättävä tai edistävä kello tuottaa
+koodeja, jotka eivät toimi, ja ihminen päättelee sovelluksen olevan rikki.
+Siksi sovellus kysyy silloin tällöin — enintään kerran päivässä — tarkan ajan
+muutamalta suurelta sivustolta (apple.com, google.com, duckduckgo.com, wikipedia.org,
+cloudflare.com) ja lukee vastauksesta vain aikaleiman.</p>
+<p><strong>Mitä laitteelta lähtee:</strong> itse pyynnön tosiasia eli
+verkko-osoitteesi, aivan kuten minkä tahansa verkkosivun avaamisessa. Koodeja, avaimia,
+palvelujen nimiä tai laitetunnisteita ei lähetetä — pyyntö
+ei sisällä mitään muuta kuin pyynnön.</p>
+<p><strong>Miksi juuri nämä osoitteet:</strong> puhelin ottaa niihin yhteyttä jatkuvasti muutenkin,
+ilman meitä. Yhteys niihin ei kerro sinusta mitään uutta.</p>
+<p>Korjauksen voi poistaa käytöstä: ”Asetukset” → ”Aika” → ”Älä käytä korjausta”.</p>
+<hr>
+<h2>6. Synkronointi laitteiden välillä</h2>
+<p>Synkronointi on pois päältä, kunnes otat sen käyttöön. Kun se on pois päältä,
+sovellus ei ota palvelimeemme lainkaan yhteyttä.</p>
+<p>Jos olet ottanut sen käyttöön:</p>
+<ul>
+<li>tietue lähtee palvelimelle laitteellasi salattuna avaimella,
+joka luodaan, kun liität omat laitteesi toisiinsa.
+Avain pysyy niillä, eikä sitä välitetä meille;</li>
+<li>palvelin näkee vain tavujonon ja avaimestasi lasketun
+postilaatikon numeron. Se ei saa nimeä, sähköpostia eikä laitetunnistetta —
+meillä ei ole niitä;</li>
+<li><strong>verkko-osoitetta, josta pyyntö tuli, ei tallenneta.</strong> Pyyntöloki
+on tarkoituksella pois päältä. Verkko tarvitsee osoitetta vastauksen
+toimittamiseen, ja se on olemassa täsmälleen pyynnön keston ajan;</li>
+<li>tietueet vanhenevat itsestään: yli 400 päivää vanhoja ei enää
+tarjota, ja palvelin poistaa ne.</li>
+</ul>
+<p>Poistamista pyynnöstä ei ole — ei sinulle eikä meille. Postilaatikon täyttyminen
+loppuu, kun poistat synkronoinnin käytöstä, ja se vanhenee ajan myötä.
+Pilvi ei korvaa varmuuskopiota: se sisältää sen, mitä laitteesi
+vaihtavat, ei arkistoa tulevaisuutta varten.</p>
+<hr>
+<h2>7. Laitteen käyttöoikeudet</h2>
+<p><strong>Kamera</strong> — pyydetään vain, kun painat itse ”Skannaa”.
+Sitä käytetään QR-koodin tunnistamiseen. Kuva käsitellään muistissa,
+eikä sitä tallenneta eikä lähetetä minnekään.
+Voit evätä oikeuden: salaisen avaimen voi kirjoittaa käsin.</p>
+<p><strong>Face ID, Touch ID, sormenjälki</strong> — vain sovelluksen lukituksen avaamiseen.
+Tarkistuksen tekee käyttöjärjestelmä; sovellus saa vain vastauksen
+”kyllä” tai ”ei”, eikä sillä ole koskaan pääsyä biometrisiin näytteisiin.</p>
+<p><strong>Tiedostojen käyttö</strong> — vain tiedostoihin, jotka olet itse valinnut
+järjestelmän valintaikkunassa, ja vain varmuuskopion lukemiseen tai kirjoittamiseen.</p>
+<hr>
+<h2>8. Varmuuskopiot</h2>
+<p>Varmuuskopion teet itse ja päätät itse, minne lähetät sen.</p>
+<p>Tiedosto salataan laitteella <strong>ennen</strong> kuin se poistuu siltä: AES-256-CBC,
+avain johdetaan salasanastasi PBKDF2-HMAC-SHA256:lla ja 10 000
+iteraatiolla, eheys vahvistetaan HMAC-SHA256:lla. Salasanaa ei tallenneta
+minnekään — ei laitteelle eikä meille.</p>
+<p><strong>Unohtunut salasana tarkoittaa, että varmuuskopio on lopullisesti menetetty.</strong> Tämä ei ole
+puute vaan suora seuraus siitä, että salaus on aitoa: sitä ei voi
+kiertää, et sinä emmekä me.</p>
+<p>Jos lähetät varmuuskopion sähköpostilla tai viestisovelluksella, siirrettyyn tiedostoon
+sovelletaan käyttämäsi palvelun sääntöjä. Emme voi vaikuttaa niihin.</p>
+<hr>
+<h2>9. Lapset</h2>
+<p>Sovellusta ei ole tarkoitettu lapsille, eikä se kerää tietoja
+kenestäkään, ei myöskään lapsista: ei nimeä, ei ikää, ei muita tietoja henkilöstä.
+Ikärajoitus perustuu tehtävän luonteeseen,
+ei sisältöön.</p>
+<hr>
+<h2>10. Oikeutesi</h2>
+<p>Salaiset avaimet, palvelujen nimet ja asetukset ovat laitteellasi. Meillä ei
+ole niitä, joten niihin pääsyn, niiden oikaisun tai poistamisen pyytäminen meiltä
+ei ole tarpeen ja on teknisesti mahdotonta.</p>
+<p>Voit poistaa kaiken laitteelta itse ja heti:
+”Asetukset” → ”Poista kaikki tilit”, tai poistamalla sovelluksen laitteelta.</p>
+<p>Jos synkronointi on käytössä, palvelimellamme on laitteistasi tulleita salattuja
+tietueita. Emme voi lukea niitä, eikä ole mitään, millä ne voisi yhdistää
+henkilöön: emme saa nimeä, sähköpostia emmekä laitetunnistetta, emmekä
+tallenna verkko-osoitteita. Näitä tietueita ei poisteta pyynnöstä,
+ei sinulle eikä meille (kohta 6); ne vanhenevat ajan myötä.
+Poista synkronointi käytöstä, niin postilaatikko ei enää täyty.</p>
+<p>GDPR:n (EU), CCPA:n (Kalifornia) ja liittovaltion lain 152-FZ (Venäjä) mukaiset oikeudet
+toteutuvat jo asian järjestelyn kautta: tietoja, joiden perusteella henkilön
+voisi tunnistaa, ei synny meidän puolellamme.</p>
+<hr>
+<h2>11. Muutokset tähän käytäntöön</h2>
+<p>Jos käytäntö muuttuu, päivitetty versio julkaistaan tässä samassa
+osoitteessa uudella päivämäärällä. Olennaisista muutoksista ilmoitetaan
+julkaisutiedoissa ennen niiden voimaantuloa.</p>
+<hr>
+<h2>12. Yhteystiedot</h2>
+<p>Tietosuojaa koskevat kysymykset ja haavoittuvuusilmoitukset:
+<strong><a href="mailto:support@lambit.eu">support@lambit.eu</a></strong></p>
+<p>Ilmoitathan haavoittuvuuksista sähköpostilla etkä julkaise niitä ennen
+korjauksen julkaisua.</p>
+</article>
+
+<section class="getapp">
+  <!-- lambit2FA: плашка и QR, собирает tools/build_plaque.py -->
+  <h2><a href="/lambit2fa/download/fi/">lambit2FA — kaksivaiheisen kirjautumisen koodit</a></h2>
+  <p>Saatavilla kaikille alustoille: iPhone, iPad, Apple Watch, Mac, Android, Wear OS -kellot, Windows, Linux. Koodisi pysyvät sinulla.</p>
+  <div class="qrs">
+    <div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad ja Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad ja Apple Watch — App Store</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android ja Wear OS -kellot — Google Play" width="104" height="104"><span>Android ja Wear OS -kellot — Google Play</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/android-apk.svg" alt="Android — APK-tiedosto tältä sivustolta" width="104" height="104"><span>Android — APK-tiedosto tältä sivustolta</span></div>
+  </div>
+  <p style="margin:12px 0 0">Osoita puhelimen kameralla QR-koodia</p>
+  <a class="dl-btn" href="/lambit2fa/download/fi/">Lataa</a>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · Plovdiv, Bulgaria · <a href="/fi/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

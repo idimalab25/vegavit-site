@@ -3,8 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VEGAVIT EOOD — software development</title>
-<meta name="description" content="VEGAVIT EOOD — a Bulgarian software company building AI-driven web services and monitoring tools.">
+<title>VEGAVIT EOOD — Software that turns raw data into clear answers</title>
+<meta name="description" content="VEGAVIT EOOD is a Bulgarian software company based in Plovdiv. We design and run our own web services: AI-driven news processing, monitoring tools and cost-saving utilities for wor">
+<link rel="canonical" href="https://vegavit.eu/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/">
+<meta name="color-scheme" content="light dark">
 <style>
   :root {
     --bg: #f4f6f9;
@@ -104,18 +129,54 @@
     .facts { grid-template-columns: 1fr; gap: 4px 0; }
     .facts dd { margin-bottom: 10px; }
   }
+
+  /* плашка lambit2FA со скачиванием */
+  .card#lambit2fa { grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .card#lambit2fa .plaque-main { flex: 1 1 320px; min-width: 260px; color: inherit; text-decoration: none; display: block; }
+  .card#lambit2fa .plaque-main:hover { text-decoration: none; }
+  .card#lambit2fa .plaque-main:hover h3 { color: var(--accent); }
+  .card#lambit2fa .dl-btn {
+    display: inline-block; margin-top: 12px; background: var(--accent); color: #fff;
+    border-radius: 9px; padding: 9px 18px; font-size: 14px; font-weight: 600;
+  }
+  .qrs { display: flex; gap: 12px; flex-wrap: wrap; }
+  .qr { width: 104px; text-align: center; font-size: 11.5px; color: var(--text-soft); line-height: 1.3; }
+  .qr img { display: block; width: 104px; height: 104px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 5px; }
+  .qr span { display: block; margin-top: 5px; }
+  .scan-hint { font-size: 12px; color: var(--text-soft); flex-basis: 100%; }
+
+  /* меню языков — по образцу ai-digest-1.com */
+  .langsw { position: relative; display: inline-block; }
+  .langmenu {
+    display: none; position: absolute; top: 100%; inset-inline-end: 0; z-index: 60;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: var(--shadow-hover); padding: 6px; min-width: 190px; max-height: 70vh; overflow: auto;
+  }
+  .langmenu.open { display: block; }
+  .langmenu a { display: block; padding: 7px 10px; border-radius: 7px; color: var(--text); white-space: nowrap; font-size: 14px; }
+  .langmenu a:hover { background: var(--accent-soft); text-decoration: none; }
+  .langmenu a.cur { color: var(--accent); font-weight: 600; }
+  .langmenu .langcode { display: inline-block; min-width: 2.1em; color: var(--text-soft); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+  html[dir=rtl] .ctrl { margin-left: 0; margin-inline-start: auto; }
+  /* шрифты письменностей */
+  :lang(zh) { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif; }
+  :lang(ja) { font-family: "Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif; }
+  :lang(ko) { font-family: "Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif; }
+  :lang(hi) { font-family: "Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif; }
+  :lang(ar) { font-family: "SF Arabic","Geeza Pro",Tahoma,"Noto Sans Arabic",sans-serif; }
 </style>
 </head>
 <body data-theme="light">
 
 <header class="site-head">
   <div class="wrap head-in">
-    <div class="logo">VEGAVIT<span>.</span></div>
+    <a class="logo" href="/" dir="ltr">VEGAVIT<span>.</span></a>
     <div class="head-sp"></div>
     <div class="ctrl">
-      <button data-lang-btn="en" class="on">EN</button>
-      <button data-lang-btn="bg">BG</button>
-      <button data-lang-btn="ru">RU</button>
+      <div class="langsw">
+        <button type="button" class="langbtn" aria-haspopup="true">🌐 <span dir="ltr">EN</span> ▾</button>
+        <div class="langmenu"><a href="/" lang="en" hreflang="en" class="cur"><span class="langcode" dir="ltr">EN</span> English</a><a href="/ru/" lang="ru" hreflang="ru"><span class="langcode" dir="ltr">RU</span> Русский</a><a href="/es/" lang="es" hreflang="es"><span class="langcode" dir="ltr">ES</span> Español</a><a href="/ar/" lang="ar" hreflang="ar"><span class="langcode" dir="ltr">AR</span> العربية</a><a href="/de/" lang="de" hreflang="de"><span class="langcode" dir="ltr">DE</span> Deutsch</a><a href="/pt/" lang="pt" hreflang="pt"><span class="langcode" dir="ltr">PT</span> Português</a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans"><span class="langcode" dir="ltr">ZH</span> 简体中文</a><a href="/fi/" lang="fi" hreflang="fi"><span class="langcode" dir="ltr">FI</span> Suomi</a><a href="/fr/" lang="fr" hreflang="fr"><span class="langcode" dir="ltr">FR</span> Français</a><a href="/nl/" lang="nl" hreflang="nl"><span class="langcode" dir="ltr">NL</span> Nederlands</a><a href="/id/" lang="id" hreflang="id"><span class="langcode" dir="ltr">ID</span> Bahasa Indonesia</a><a href="/hi/" lang="hi" hreflang="hi"><span class="langcode" dir="ltr">HI</span> हिन्दी</a><a href="/ja/" lang="ja" hreflang="ja"><span class="langcode" dir="ltr">JA</span> 日本語</a><a href="/ko/" lang="ko" hreflang="ko"><span class="langcode" dir="ltr">KO</span> 한국어</a><a href="/tr/" lang="tr" hreflang="tr"><span class="langcode" dir="ltr">TR</span> Türkçe</a><a href="/vi/" lang="vi" hreflang="vi"><span class="langcode" dir="ltr">VI</span> Tiếng Việt</a><a href="/it/" lang="it" hreflang="it"><span class="langcode" dir="ltr">IT</span> Italiano</a><a href="/pl/" lang="pl" hreflang="pl"><span class="langcode" dir="ltr">PL</span> Polski</a><a href="/ro/" lang="ro" hreflang="ro"><span class="langcode" dir="ltr">RO</span> Română</a><a href="/el/" lang="el" hreflang="el"><span class="langcode" dir="ltr">EL</span> Ελληνικά</a><a href="/hu/" lang="hu" hreflang="hu"><span class="langcode" dir="ltr">HU</span> Magyar</a><a href="/bg/" lang="bg" hreflang="bg"><span class="langcode" dir="ltr">BG</span> Български</a></div>
+      </div>
       <button id="themeBtn" title="day / night">☾</button>
     </div>
   </div>
@@ -124,179 +185,107 @@
 <main class="wrap">
 
   <div class="hero">
-    <h1 data-i18n="heroTitle">Software that turns raw data into clear answers</h1>
-    <p data-i18n="heroText">VEGAVIT EOOD is a Bulgarian software company based in Plovdiv. We design and run our own web services: AI-driven news processing, monitoring tools and cost-saving utilities for working with large language models.</p>
+    <h1>Software that turns raw data into clear answers</h1>
+    <p>VEGAVIT EOOD is a Bulgarian software company based in Plovdiv. We design and run our own web services: AI-driven news processing, monitoring tools and cost-saving utilities for working with large language models.</p>
   </div>
 
   <section>
-    <h2 data-i18n="projTitle">Software projects</h2>
+    <h2>Software projects</h2>
     <div class="cards">
 
+      <!-- lambit2FA: плашка со скачиванием, собирает tools/build_site.py -->
       <div class="card" id="lambit2fa">
-        <h3>lambit2FA</h3>
-        <p data-i18n="p6">lambit2FA — two-factor sign-in codes. The codes are kept in your phone, are synchronised between your own devices and reach nobody, us included, in readable form. Up to 300 codes. Free, no advertising.</p>
-        <a class="priv" id="lambitPriv" href="/lambit2fa/privacy/en/" data-i18n="privLink">Privacy policy</a>
+        <a class="plaque-main" href="/lambit2fa/download/">
+          <h3>lambit2FA — two-factor login codes</h3>
+          <p>Available on every platform: iPhone, iPad, Apple Watch, Mac, Android, Wear OS watches, Windows, Linux. Your codes stay with you.</p>
+          <span class="dl-btn">Download</span>
+        </a>
+        <div class="qrs"><div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad and Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad and Apple Watch — App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android and Wear OS watches — Google Play" width="104" height="104"><span>Android and Wear OS watches — Google Play</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-apk.svg" alt="Android — APK file from this site" width="104" height="104"><span>Android — APK file from this site</span></div></div>
+        <div class="scan-hint">Point your phone camera at the QR code</div>
+        <a class="priv" href="/lambit2fa/privacy/en/">Privacy policy</a>
       </div>
 
       <div class="card">
         <h3>AI World Digest</h3>
         <a class="dom" href="https://ai-digest-1.com" target="_blank" rel="noopener">ai-digest-1.com</a>
-        <p data-i18n="p1">An hourly digest of world artificial-intelligence news, published in ten languages. Sources are collected automatically, filtered for significance and summarised into short cards.</p>
+        <p>An hourly digest of world artificial-intelligence news, published in ten languages. Sources are collected automatically, filtered for significance and summarised into short cards.</p>
+        
       </div>
-
       <div class="card">
         <h3>TokenDryer</h3>
         <a class="dom" href="https://tokendryer.com" target="_blank" rel="noopener">tokendryer.com</a>
-        <p data-i18n="p2">A token economiser for large language models: it reduces the volume of text sent to an AI model, so the same work costs less.</p>
-        <p class="plat" data-i18n="plat">In development for iOS, Android, macOS and Windows.</p>
+        <p>A token economiser for large language models: it reduces the volume of text sent to an AI model, so the same work costs less.</p>
+        <p class="plat">In development for iOS, Android, macOS and Windows.</p>
       </div>
-
       <div class="card">
         <h3>FMCheck</h3>
         <a class="dom" href="https://fmcheck.online" target="_blank" rel="noopener">fmcheck.online</a>
-        <p data-i18n="p3">A cloud service for climate and cold-chain monitoring — for food producers, pharmaceuticals and medicine, biobanks and transport. Own low-cost sensors, tamper-evident records, alarms and calibration tracking. In development under the working name CoolBoxMonitor.</p>
-        <p class="plat" data-i18n="plat">In development for iOS, Android, macOS and Windows.</p>
+        <p>A cloud service for climate and cold-chain monitoring — for food producers, pharmaceuticals and medicine, biobanks and transport. Own low-cost sensors, tamper-evident records, alarms and calibration tracking. In development under the working name CoolBoxMonitor.</p>
+        <p class="plat">In development for iOS, Android, macOS and Windows.</p>
       </div>
-
       <div class="card">
         <h3>MoreMoreIdea</h3>
         <span class="dom">—</span>
-        <p data-i18n="p4">An AI-driven generator of management decisions built on morphological vectors.</p>
-        <p class="plat" data-i18n="plat">In development for iOS, Android, macOS and Windows.</p>
+        <p>An AI-driven generator of management decisions built on morphological vectors.</p>
+        <p class="plat">In development for iOS, Android, macOS and Windows.</p>
       </div>
-
       <div class="card">
         <h3>Fish &amp; Mushrooms</h3>
-        <p data-i18n="p5">A group of native applications with a shared server. You keep a private log of your catches and finds — fishing, hunting, mushrooms, berries — and may share a spot with one person of your choosing. There is no public feed and no common map: locations are never disclosed to everyone.</p>
-        <p class="plat" data-i18n="plat">In development for iOS, Android, macOS and Windows.</p>
+        
+        <p>A group of native applications with a shared server. You keep a private log of your catches and finds — fishing, hunting, mushrooms, berries — and may share a spot with one person of your choosing. There is no public feed and no common map: locations are never disclosed to everyone.</p>
+        <p class="plat">In development for iOS, Android, macOS and Windows.</p>
       </div>
 
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="mfgTitle">Manufacturing</h2>
+    <h2>Manufacturing</h2>
     <div class="cards">
       <div class="card">
-        <h3 data-i18n="mfgName">Acoustic freezing chambers</h3>
+        <h3>Acoustic freezing chambers</h3>
         <a class="dom" href="https://www.aeftrade.eu" target="_blank" rel="noopener">www.aeftrade.eu</a>
-        <p data-i18n="mfgText">Besides software, we build equipment to order: AEF acoustic shock-freezing chambers for fish and seafood, meat, berries, fruit, confectionery and ready meals. Each chamber is made to the customer's specification.</p>
+        <p>Besides software, we build equipment to order: AEF acoustic shock-freezing chambers for fish and seafood, meat, berries, fruit, confectionery and ready meals. Each chamber is made to the customer's specification.</p>
       </div>
     </div>
   </section>
 
   <section>
-    <h2 data-i18n="aboutTitle">Company</h2>
+    <h2>Company</h2>
     <dl class="facts">
-      <dt data-i18n="fName">Legal name</dt><dd>VEGAVIT EOOD</dd>
-      <dt data-i18n="fReg">Registration number</dt><dd>207380781</dd>
-      <dt data-i18n="fVat">VAT number</dt><dd>BG207380781</dd>
-      <dt data-i18n="fAddr">Address</dt><dd>ul. Pleven 6, Plovdiv 4000, Bulgaria</dd>
-      <dt data-i18n="fDir">Manager</dt><dd>Dmitry Balabolin</dd>
-      <dt data-i18n="fMail">E-mail</dt><dd><a href="mailto:dbalabolin@vegavit.eu">dbalabolin@vegavit.eu</a></dd>
-      <dt data-i18n="fPhone">Phone</dt><dd>+359 88 483 6662</dd>
+      <dt>Legal name</dt><dd>VEGAVIT EOOD</dd>
+      <dt>Registration number</dt><dd>207380781</dd>
+      <dt>VAT number</dt><dd>BG207380781</dd>
+      <dt>Address</dt><dd><bdi>ul. Pleven 6, Plovdiv 4000, Bulgaria</bdi></dd>
+      <dt>Manager</dt><dd><bdi>Dmitry Balabolin</bdi></dd>
+      <dt>E-mail</dt><dd><bdi><a href="mailto:dbalabolin@vegavit.eu">dbalabolin@vegavit.eu</a></bdi></dd>
+      <dt>Phone</dt><dd><bdi>+359 88 483 6662</bdi></dd>
     </dl>
   </section>
 
 </main>
 
 <footer class="wrap">
-  <span data-i18n="foot">© 2026 VEGAVIT EOOD · Plovdiv, Bulgaria</span>
+  <span>© 2026 VEGAVIT EOOD · Plovdiv, Bulgaria</span>
 </footer>
 
 <script>
-const T = {
-  en: {
-    heroTitle: "Software that turns raw data into clear answers",
-    heroText: "VEGAVIT EOOD is a Bulgarian software company based in Plovdiv. We design and run our own web services: AI-driven news processing, monitoring tools and cost-saving utilities for working with large language models.",
-    projTitle: "Software projects",
-    p1: "An hourly digest of world artificial-intelligence news, published in ten languages. Sources are collected automatically, filtered for significance and summarised into short cards.",
-    p2: "A token economiser for large language models: it reduces the volume of text sent to an AI model, so the same work costs less.",
-    p3: "A cloud service for climate and cold-chain monitoring — for food producers, pharmaceuticals and medicine, biobanks and transport. Own low-cost sensors, tamper-evident records, alarms and calibration tracking. In development under the working name CoolBoxMonitor.",
-    p4: "An AI-driven generator of management decisions built on morphological vectors.",
-    p5: "A group of native applications with a shared server. You keep a private log of your catches and finds — fishing, hunting, mushrooms, berries — and may share a spot with one person of your choosing. There is no public feed and no common map: locations are never disclosed to everyone.",
-    plat: "In development for iOS, Android, macOS and Windows.",
-    p6: "lambit2FA — two-factor sign-in codes. The codes are kept in your phone, are synchronised between your own devices and reach nobody, us included, in readable form. Up to 300 codes. Free, no advertising.",
-    privLink: "Privacy policy",
-    mfgTitle: "Manufacturing",
-    mfgName: "Acoustic freezing chambers",
-    mfgText: "Besides software, we build equipment to order: AEF acoustic shock-freezing chambers for fish and seafood, meat, berries, fruit, confectionery and ready meals. Each chamber is made to the customer's specification.",
-    aboutTitle: "Company",
-    fName: "Legal name", fReg: "Registration number", fVat: "VAT number",
-    fAddr: "Address", fDir: "Manager", fMail: "E-mail", fPhone: "Phone",
-    foot: "© 2026 VEGAVIT EOOD · Plovdiv, Bulgaria"
-  },
-  bg: {
-    heroTitle: "Софтуер, който превръща данните в ясни отговори",
-    heroText: "ВЕГАВИТ ЕООД е българска софтуерна компания със седалище в Пловдив. Разработваме и поддържаме собствени уеб услуги: обработка на новини с изкуствен интелект, инструменти за наблюдение и решения за намаляване на разходите при работа с големи езикови модели.",
-    projTitle: "Софтуерни проекти",
-    p1: "Ежечасен дайджест на световните новини за изкуствен интелект на десет езика. Източниците се събират автоматично, филтрират се по значимост и се обобщават в кратки карти.",
-    p2: "Икономайзер на токени за големи езикови модели: намалява обема текст, изпращан към модела, така че същата работа струва по-малко.",
-    p3: "Облачна услуга за наблюдение на климата и хладилната верига — за хранителни производства, фармация и медицина, биобанки и транспорт. Собствени евтини датчици, защитен от подмяна архив, аларми и проследяване на проверките. В разработка под работното име CoolBoxMonitor.",
-    p4: "Генератор на управленски решения, основан на изкуствен интелект и морфологични вектори.",
-    p5: "Група нативни приложения с общ сървър. Водите личен дневник на своя улов и находки — риболов, лов, гъби, горски плодове — и можете да споделите място само с един избран от вас човек. Няма публичен поток и няма обща карта: местата никога не се разкриват на всички.",
-    plat: "В разработка за iOS, Android, macOS и Windows.",
-    p6: "lambit2FA — кодове за двуфакторно влизане. Кодовете се пазят във вашия телефон, синхронизират се между вашите устройства и до никого, включително до нас, не достигат в открит вид. До 300 кода. Безплатно, без реклама.",
-    privLink: "Политика за поверителност",
-    mfgTitle: "Производство",
-    mfgName: "Камери за акустично замразяване",
-    mfgText: "Освен софтуер произвеждаме и оборудване по поръчка: камери за акустично шоково замразяване AEF за риба и морски дарове, месо, плодове и горски плодове, сладкарски изделия и готови ястия. Всяка камера се изработва по спецификация на клиента.",
-    aboutTitle: "Фирма",
-    fName: "Наименование", fReg: "ЕИК", fVat: "ДДС номер",
-    fAddr: "Адрес", fDir: "Управител", fMail: "Е-поща", fPhone: "Телефон",
-    foot: "© 2026 ВЕГАВИТ ЕООД · Пловдив, България"
-  },
-  ru: {
-    heroTitle: "Программы, которые превращают данные в понятные ответы",
-    heroText: "«ВЕГАВИТ» ЕООД — болгарская софтверная компания из Пловдива. Мы разрабатываем и содержим собственные веб-сервисы: обработку новостей искусственным интеллектом, средства наблюдения и инструменты экономии при работе с большими языковыми моделями.",
-    projTitle: "Программные проекты",
-    p1: "Ежечасная сводка мировых новостей об искусственном интеллекте на десяти языках. Источники собираются автоматически, отсеиваются по значимости и сжимаются в короткие карточки.",
-    p2: "Экономайзер токенов для больших языковых моделей: уменьшает объём текста, отправляемого модели, поэтому та же работа обходится дешевле.",
-    p3: "Облачный сервис мониторинга климата и холодовой цепи — для пищевых производств, фармы и медицины, биобанков и транспорта. Свои недорогие датчики, защищённый от подмены архив, тревоги и учёт поверок. В разработке под рабочим именем CoolBoxMonitor.",
-    p4: "Генератор управленческих решений на основе искусственного интеллекта и морфологических векторов.",
-    p5: "Группа нативных приложений с общим сервером. Человек ведёт личный дневник своих удач — рыбалка, охота, грибы, ягоды — и может поделиться местом только с одним выбранным человеком. Общей ленты и общей карты нет: места никогда не раскрываются всем.",
-    plat: "В разработке под iOS, Android, macOS и Windows.",
-    p6: "lambit2FA — коды двухфакторного входа. Коды хранятся в вашем телефоне, синхронизируются между вашими устройствами и никому, включая нас, в открытом виде не достаются. До 300 кодов. Бесплатно, без рекламы.",
-    privLink: "Политика конфиденциальности",
-    mfgTitle: "Производство",
-    mfgName: "Камеры акустической заморозки",
-    mfgText: "Кроме программ мы изготавливаем оборудование на заказ: камеры акустической шоковой заморозки AEF для рыбы и морепродуктов, мяса, ягод, фруктов, кондитерских изделий и готовых блюд. Каждая камера делается по спецификации заказчика.",
-    aboutTitle: "Компания",
-    fName: "Наименование", fReg: "ЕИК", fVat: "Номер по ДДС",
-    fAddr: "Адрес", fDir: "Управитель", fMail: "Почта", fPhone: "Телефон",
-    foot: "© 2026 «ВЕГАВИТ» ЕООД · Пловдив, Болгария"
-  }
-};
-
-const PRIVACY_URL = {
-  en: "/lambit2fa/privacy/en/",
-  bg: "/lambit2fa/privacy/bg/",
-  ru: "/lambit2fa/privacy/"
-};
-
-function setLang(code) {
-  const d = T[code]; if (!d) return;
-  document.documentElement.lang = code;
-  const pv = document.getElementById('lambitPriv');
-  if (pv && PRIVACY_URL[code]) pv.href = PRIVACY_URL[code];
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const k = el.getAttribute('data-i18n');
-    if (d[k]) el.textContent = d[k];
-  });
-  document.querySelectorAll('[data-lang-btn]').forEach(b =>
-    b.classList.toggle('on', b.getAttribute('data-lang-btn') === code));
-}
-
-document.querySelectorAll('[data-lang-btn]').forEach(b =>
-  b.addEventListener('click', () => setLang(b.getAttribute('data-lang-btn'))));
+// Язык задаётся адресом страницы — скрипт его не трогает.
+const m = document.querySelector('.langmenu');
+document.querySelector('.langbtn').onclick = e => { e.stopPropagation(); m.classList.toggle('open'); };
+document.addEventListener('click', e => { if (!m.contains(e.target)) m.classList.remove('open'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') m.classList.remove('open'); });
 
 const themeBtn = document.getElementById('themeBtn');
+try { if (localStorage.getItem('theme') === 'dark') {
+  document.body.dataset.theme = 'dark'; document.documentElement.dataset.theme = 'dark'; themeBtn.textContent = '☀';
+} } catch (e) {}
 themeBtn.addEventListener('click', () => {
-  const b = document.body;
-  const next = b.dataset.theme === 'light' ? 'dark' : 'light';
-  b.dataset.theme = next;
+  const next = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+  document.body.dataset.theme = next;
   document.documentElement.dataset.theme = next;
   themeBtn.textContent = next === 'light' ? '☾' : '☀';
+  try { localStorage.setItem('theme', next); } catch (e) {}
 });
 </script>
 

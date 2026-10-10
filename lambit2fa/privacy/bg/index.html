@@ -54,6 +54,16 @@
   footer{border-top:1px solid var(--line);background:var(--surface);
          color:var(--text-soft);font-size:14px;padding:18px 0}
   @media (max-width:560px){ .doc{padding:22px 18px 28px} h1{font-size:24px} }
+
+.getapp{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:20px 22px;margin:30px 0 10px}
+.getapp h2{font-size:17px;margin-bottom:6px}
+.getapp p{color:var(--text-soft);font-size:14px;margin-bottom:12px}
+.getapp .qrs{display:flex;gap:12px;flex-wrap:wrap}
+.getapp .qr{width:104px;text-align:center;font-size:11.5px;color:var(--text-soft);line-height:1.3}
+.getapp .qr img{display:block;width:104px;height:104px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px}
+.getapp .qr span{display:block;margin-top:5px}
+.getapp .dl-btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;border-radius:9px;padding:9px 18px;font-size:14px;font-weight:600}
+.getapp .dl-btn:hover{text-decoration:none;opacity:.9}
 </style>
 </head>
 <body>
@@ -252,6 +262,20 @@ wikipedia.org, cloudflare.com) и чете от отговора само отм
 излизането на поправка.</p>
 
 </article>
+
+<section class="getapp">
+  <!-- lambit2FA: плашка и QR, собирает tools/build_plaque.py -->
+  <h2><a href="/lambit2fa/download/bg/">lambit2FA — кодове за двустепенно влизане</a></h2>
+  <p>Налично на всички платформи: iPhone, iPad, Apple Watch, Mac, Android, часовници Wear OS, Windows, Linux. Кодовете остават при вас.</p>
+  <div class="qrs">
+    <div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad и Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad и Apple Watch — App Store</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android и часовници Wear OS — Google Play" width="104" height="104"><span>Android и часовници Wear OS — Google Play</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/android-apk.svg" alt="Android — APK файл от този сайт" width="104" height="104"><span>Android — APK файл от този сайт</span></div>
+  </div>
+  <p style="margin:12px 0 0">Насочете камерата на телефона към QR кода</p>
+  <a class="dl-btn" href="/lambit2fa/download/bg/">Изтегляне</a>
+</section>
 </main>
 
 <footer>

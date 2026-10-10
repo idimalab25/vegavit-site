@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VEGAVIT EOOD — Software que convierte datos en bruto en respuestas claras</title>
+<meta name="description" content="VEGAVIT EOOD es una empresa de software búlgara con sede en Plovdiv. Diseñamos y mantenemos nuestros propios servicios web: procesamiento de noticias con inteligencia artificial, h">
+<link rel="canonical" href="https://vegavit.eu/es/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root {
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --text: #14181f;
+    --text-soft: #5b6472;
+    --line: #e3e7ee;
+    --accent: #1a5fd0;
+    --accent-soft: #e8f0fe;
+    --shadow: 0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.07);
+    --shadow-hover: 0 2px 4px rgba(15,23,42,.08), 0 14px 34px rgba(15,23,42,.13);
+  }
+  [data-theme="dark"] {
+    --bg: #10141b;
+    --surface: #1a2029;
+    --text: #e8ecf2;
+    --text-soft: #97a1af;
+    --line: #29313d;
+    --accent: #6ea8ff;
+    --accent-soft: #1f2c42;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    --shadow-hover: 0 2px 4px rgba(0,0,0,.4), 0 14px 34px rgba(0,0,0,.5);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+    transition: background .25s, color .25s;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 20px; }
+
+  /* шапка */
+  .site-head {
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+    position: sticky; top: 0; z-index: 20;
+  }
+  .head-in {
+    display: flex; align-items: center; gap: 16px;
+    padding: 14px 0; flex-wrap: wrap;
+  }
+  .logo { font-size: 20px; font-weight: 700; letter-spacing: .5px; color: var(--text); }
+  .logo span { color: var(--accent); }
+  .head-sp { flex: 1; }
+  .ctrl { display: flex; gap: 6px; align-items: center; }
+  .ctrl button {
+    background: transparent; color: var(--text-soft);
+    border: 1px solid var(--line); border-radius: 20px;
+    padding: 5px 13px; cursor: pointer; font-size: 13px;
+    transition: all .2s;
+  }
+  .ctrl button:hover { border-color: var(--accent); color: var(--accent); }
+  .ctrl button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  /* первый экран */
+  .hero { padding: 56px 0 40px; }
+  .hero h1 { font-size: 34px; line-height: 1.25; margin-bottom: 14px; }
+  .hero p { font-size: 17px; color: var(--text-soft); max-width: 620px; }
+
+  /* секции */
+  section { padding: 34px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 21px; margin-bottom: 18px; }
+
+  /* проекты */
+  .cards { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .card {
+    background: var(--surface); border: 1px solid var(--line);
+    border-radius: 12px; padding: 18px 20px; box-shadow: var(--shadow);
+    transition: box-shadow .2s, transform .2s;
+  }
+  .card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
+  .card h3 { font-size: 16px; margin-bottom: 6px; }
+  .card .dom { font-size: 13px; color: var(--accent); display: block; margin-bottom: 8px; }
+  .card p { font-size: 14px; color: var(--text-soft); }
+  .card[id] { scroll-margin-top: 90px; }
+  .card a.priv { font-size: 13px; display: inline-block; margin-top: 8px; }
+  .card p.plat {
+    margin-top: 10px; font-size: 12.5px; color: var(--accent);
+    border-top: 1px solid var(--line); padding-top: 8px;
+  }
+
+  /* реквизиты */
+  .facts { display: grid; gap: 10px 24px; grid-template-columns: max-content 1fr; font-size: 15px; }
+  .facts dt { color: var(--text-soft); }
+  .facts dd { font-weight: 500; }
+
+  footer {
+    border-top: 1px solid var(--line); padding: 24px 0 40px;
+    font-size: 13px; color: var(--text-soft);
+  }
+  @media (max-width: 560px) {
+    .hero h1 { font-size: 26px; }
+    .facts { grid-template-columns: 1fr; gap: 4px 0; }
+    .facts dd { margin-bottom: 10px; }
+  }
+
+  /* плашка lambit2FA со скачиванием */
+  .card#lambit2fa { grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .card#lambit2fa .plaque-main { flex: 1 1 320px; min-width: 260px; color: inherit; text-decoration: none; display: block; }
+  .card#lambit2fa .plaque-main:hover { text-decoration: none; }
+  .card#lambit2fa .plaque-main:hover h3 { color: var(--accent); }
+  .card#lambit2fa .dl-btn {
+    display: inline-block; margin-top: 12px; background: var(--accent); color: #fff;
+    border-radius: 9px; padding: 9px 18px; font-size: 14px; font-weight: 600;
+  }
+  .qrs { display: flex; gap: 12px; flex-wrap: wrap; }
+  .qr { width: 104px; text-align: center; font-size: 11.5px; color: var(--text-soft); line-height: 1.3; }
+  .qr img { display: block; width: 104px; height: 104px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 5px; }
+  .qr span { display: block; margin-top: 5px; }
+  .scan-hint { font-size: 12px; color: var(--text-soft); flex-basis: 100%; }
+
+  /* меню языков — по образцу ai-digest-1.com */
+  .langsw { position: relative; display: inline-block; }
+  .langmenu {
+    display: none; position: absolute; top: 100%; inset-inline-end: 0; z-index: 60;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    box-shadow: var(--shadow-hover); padding: 6px; min-width: 190px; max-height: 70vh; overflow: auto;
+  }
+  .langmenu.open { display: block; }
+  .langmenu a { display: block; padding: 7px 10px; border-radius: 7px; color: var(--text); white-space: nowrap; font-size: 14px; }
+  .langmenu a:hover { background: var(--accent-soft); text-decoration: none; }
+  .langmenu a.cur { color: var(--accent); font-weight: 600; }
+  .langmenu .langcode { display: inline-block; min-width: 2.1em; color: var(--text-soft); font-size: 12px; font-weight: 700; letter-spacing: .04em; }
+  html[dir=rtl] .ctrl { margin-left: 0; margin-inline-start: auto; }
+  /* шрифты письменностей */
+  :lang(zh) { font-family: "PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif; }
+  :lang(ja) { font-family: "Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif; }
+  :lang(ko) { font-family: "Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif; }
+  :lang(hi) { font-family: "Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif; }
+  :lang(ar) { font-family: "SF Arabic","Geeza Pro",Tahoma,"Noto Sans Arabic",sans-serif; }
+</style>
+</head>
+<body data-theme="light">
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/es/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="ctrl">
+      <div class="langsw">
+        <button type="button" class="langbtn" aria-haspopup="true">🌐 <span dir="ltr">ES</span> ▾</button>
+        <div class="langmenu"><a href="/" lang="en" hreflang="en"><span class="langcode" dir="ltr">EN</span> English</a><a href="/ru/" lang="ru" hreflang="ru"><span class="langcode" dir="ltr">RU</span> Русский</a><a href="/es/" lang="es" hreflang="es" class="cur"><span class="langcode" dir="ltr">ES</span> Español</a><a href="/ar/" lang="ar" hreflang="ar"><span class="langcode" dir="ltr">AR</span> العربية</a><a href="/de/" lang="de" hreflang="de"><span class="langcode" dir="ltr">DE</span> Deutsch</a><a href="/pt/" lang="pt" hreflang="pt"><span class="langcode" dir="ltr">PT</span> Português</a><a href="/zh/" lang="zh-Hans" hreflang="zh-Hans"><span class="langcode" dir="ltr">ZH</span> 简体中文</a><a href="/fi/" lang="fi" hreflang="fi"><span class="langcode" dir="ltr">FI</span> Suomi</a><a href="/fr/" lang="fr" hreflang="fr"><span class="langcode" dir="ltr">FR</span> Français</a><a href="/nl/" lang="nl" hreflang="nl"><span class="langcode" dir="ltr">NL</span> Nederlands</a><a href="/id/" lang="id" hreflang="id"><span class="langcode" dir="ltr">ID</span> Bahasa Indonesia</a><a href="/hi/" lang="hi" hreflang="hi"><span class="langcode" dir="ltr">HI</span> हिन्दी</a><a href="/ja/" lang="ja" hreflang="ja"><span class="langcode" dir="ltr">JA</span> 日本語</a><a href="/ko/" lang="ko" hreflang="ko"><span class="langcode" dir="ltr">KO</span> 한국어</a><a href="/tr/" lang="tr" hreflang="tr"><span class="langcode" dir="ltr">TR</span> Türkçe</a><a href="/vi/" lang="vi" hreflang="vi"><span class="langcode" dir="ltr">VI</span> Tiếng Việt</a><a href="/it/" lang="it" hreflang="it"><span class="langcode" dir="ltr">IT</span> Italiano</a><a href="/pl/" lang="pl" hreflang="pl"><span class="langcode" dir="ltr">PL</span> Polski</a><a href="/ro/" lang="ro" hreflang="ro"><span class="langcode" dir="ltr">RO</span> Română</a><a href="/el/" lang="el" hreflang="el"><span class="langcode" dir="ltr">EL</span> Ελληνικά</a><a href="/hu/" lang="hu" hreflang="hu"><span class="langcode" dir="ltr">HU</span> Magyar</a><a href="/bg/" lang="bg" hreflang="bg"><span class="langcode" dir="ltr">BG</span> Български</a></div>
+      </div>
+      <button id="themeBtn" title="day / night">☾</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <h1>Software que convierte datos en bruto en respuestas claras</h1>
+    <p>VEGAVIT EOOD es una empresa de software búlgara con sede en Plovdiv. Diseñamos y mantenemos nuestros propios servicios web: procesamiento de noticias con inteligencia artificial, herramientas de monitorización y utilidades que abaratan el trabajo con grandes modelos de lenguaje.</p>
+  </div>
+
+  <section>
+    <h2>Proyectos de software</h2>
+    <div class="cards">
+
+      <!-- lambit2FA: плашка со скачиванием, собирает tools/build_site.py -->
+      <div class="card" id="lambit2fa">
+        <a class="plaque-main" href="/lambit2fa/download/es/">
+          <h3>lambit2FA — códigos de inicio de sesión en dos pasos</h3>
+          <p>Disponible en todas las plataformas: iPhone, iPad, Apple Watch, Mac, Android, relojes Wear OS, Windows, Linux. Sus códigos se quedan con usted.</p>
+          <span class="dl-btn">Descargar</span>
+        </a>
+        <div class="qrs"><div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad y Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad y Apple Watch — App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android y relojes Wear OS — Google Play" width="104" height="104"><span>Android y relojes Wear OS — Google Play</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-apk.svg" alt="Android — archivo APK desde este sitio" width="104" height="104"><span>Android — archivo APK desde este sitio</span></div></div>
+        <div class="scan-hint">Apunte la cámara del teléfono al código QR</div>
+        <a class="priv" href="/lambit2fa/privacy/es/">Política de privacidad</a>
+      </div>
+
+      <div class="card">
+        <h3>AI World Digest</h3>
+        <a class="dom" href="https://ai-digest-1.com" target="_blank" rel="noopener">ai-digest-1.com</a>
+        <p>Un resumen cada hora de las noticias mundiales sobre inteligencia artificial, publicado en diez idiomas. Las fuentes se recopilan automáticamente, se filtran por relevancia y se resumen en fichas breves.</p>
+        
+      </div>
+      <div class="card">
+        <h3>TokenDryer</h3>
+        <a class="dom" href="https://tokendryer.com" target="_blank" rel="noopener">tokendryer.com</a>
+        <p>Un ahorrador de tokens para grandes modelos de lenguaje: reduce el volumen de texto enviado al modelo, de modo que el mismo trabajo cuesta menos.</p>
+        <p class="plat">En desarrollo para iOS, Android, macOS y Windows.</p>
+      </div>
+      <div class="card">
+        <h3>FMCheck</h3>
+        <a class="dom" href="https://fmcheck.online" target="_blank" rel="noopener">fmcheck.online</a>
+        <p>Un servicio en la nube para la vigilancia del clima y de la cadena de frío: para productores de alimentos, farmacia y medicina, biobancos y transporte. Sensores propios de bajo coste, registros a prueba de manipulación, alarmas y seguimiento de calibraciones. En desarrollo con el nombre de trabajo CoolBoxMonitor.</p>
+        <p class="plat">En desarrollo para iOS, Android, macOS y Windows.</p>
+      </div>
+      <div class="card">
+        <h3>MoreMoreIdea</h3>
+        <span class="dom">—</span>
+        <p>Un generador de decisiones de gestión basado en inteligencia artificial y vectores morfológicos.</p>
+        <p class="plat">En desarrollo para iOS, Android, macOS y Windows.</p>
+      </div>
+      <div class="card">
+        <h3>Fish &amp; Mushrooms</h3>
+        
+        <p>Un grupo de aplicaciones nativas con un servidor común. Llevas un diario privado de tus capturas y hallazgos —pesca, caza, setas, bayas— y puedes compartir un lugar solo con una persona que elijas. No hay muro público ni mapa común: los lugares nunca se revelan a todos.</p>
+        <p class="plat">En desarrollo para iOS, Android, macOS y Windows.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Producción</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Cámaras de congelación acústica</h3>
+        <a class="dom" href="https://www.aeftrade.eu" target="_blank" rel="noopener">www.aeftrade.eu</a>
+        <p>Además de software, fabricamos equipos por encargo: cámaras de congelación rápida acústica AEF para pescado y marisco, carne, bayas, fruta, repostería y platos preparados. Cada cámara se fabrica según las especificaciones del cliente.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Empresa</h2>
+    <dl class="facts">
+      <dt>Empresa</dt><dd>VEGAVIT EOOD</dd>
+      <dt>Número de registro</dt><dd>207380781</dd>
+      <dt>Número de IVA</dt><dd>BG207380781</dd>
+      <dt>Dirección</dt><dd><bdi>ul. Pleven 6, Plovdiv 4000, Bulgaria</bdi></dd>
+      <dt>Gerente</dt><dd><bdi>Dmitry Balabolin</bdi></dd>
+      <dt>Correo</dt><dd><bdi><a href="mailto:dbalabolin@vegavit.eu">dbalabolin@vegavit.eu</a></bdi></dd>
+      <dt>Teléfono</dt><dd><bdi>+359 88 483 6662</bdi></dd>
+    </dl>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>© 2026 VEGAVIT EOOD · Plovdiv, Bulgaria</span>
+</footer>
+
+<script>
+// Язык задаётся адресом страницы — скрипт его не трогает.
+const m = document.querySelector('.langmenu');
+document.querySelector('.langbtn').onclick = e => { e.stopPropagation(); m.classList.toggle('open'); };
+document.addEventListener('click', e => { if (!m.contains(e.target)) m.classList.remove('open'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') m.classList.remove('open'); });
+
+const themeBtn = document.getElementById('themeBtn');
+try { if (localStorage.getItem('theme') === 'dark') {
+  document.body.dataset.theme = 'dark'; document.documentElement.dataset.theme = 'dark'; themeBtn.textContent = '☀';
+} } catch (e) {}
+themeBtn.addEventListener('click', () => {
+  const next = document.body.dataset.theme === 'light' ? 'dark' : 'light';
+  document.body.dataset.theme = next;
+  document.documentElement.dataset.theme = next;
+  themeBtn.textContent = next === 'light' ? '☾' : '☀';
+  try { localStorage.setItem('theme', next); } catch (e) {}
+});
+</script>
+
+</body>
+</html>

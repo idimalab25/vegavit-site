@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A lambit2FA adatvédelmi szabályzata — VEGAVIT EOOD</title>
+<meta name="description" content="A lambit2FA alkalmazás adatvédelmi szabályzata. VEGAVIT EOOD, Plovdiv, Bulgária.">
+<style>
+  :root{
+    --bg:#f4f6f9; --surface:#ffffff; --text:#14181f; --text-soft:#5b6472;
+    --line:#e3e7ee; --accent:#1a5fd0;
+    --shadow:0 1px 2px rgba(15,23,42,.06), 0 8px 24px rgba(15,23,42,.07);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#10141b; --surface:#1a2029; --text:#e8ecf2; --text-soft:#97a1af;
+      --line:#29313d; --accent:#6ea8ff;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    background:var(--bg); color:var(--text); line-height:1.6;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:780px;margin:0 auto;padding:0 20px}
+  .site-head{background:var(--surface);border-bottom:1px solid var(--line)}
+  .head-in{display:flex;align-items:center;gap:16px;padding:14px 0;flex-wrap:wrap}
+  .logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--text)}
+  .logo span{color:var(--accent)}
+  .head-sp{flex:1}
+  .langs{display:flex;gap:6px}
+  .langs a{
+    border:1px solid var(--line);border-radius:20px;padding:5px 13px;
+    font-size:13px;color:var(--text-soft);text-decoration:none
+  }
+  .langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+  main{padding:34px 0 60px}
+  .doc{background:var(--surface);border:1px solid var(--line);border-radius:14px;
+       box-shadow:var(--shadow);padding:30px 28px 36px}
+  h1{font-size:28px;line-height:1.25;margin-bottom:10px}
+  h2{font-size:18px;margin:30px 0 10px}
+  p,ul{margin:10px 0}
+  ul{padding-left:22px}
+  li{margin:5px 0}
+  hr{border:0;border-top:1px solid var(--line);margin:26px 0}
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:15px}
+  th,td{border:1px solid var(--line);padding:9px 11px;text-align:left;vertical-align:top}
+  th{background:var(--bg)}
+  code{background:var(--bg);border:1px solid var(--line);border-radius:5px;padding:1px 5px;font-size:14px}
+  .meta{color:var(--text-soft);font-size:15px}
+  footer{border-top:1px solid var(--line);background:var(--surface);
+         color:var(--text-soft);font-size:14px;padding:18px 0}
+  @media (max-width:560px){ .doc{padding:22px 18px 28px} h1{font-size:24px} }
+
+.getapp{background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:20px 22px;margin:30px 0 10px}
+.getapp h2{font-size:17px;margin-bottom:6px}
+.getapp p{color:var(--text-soft);font-size:14px;margin-bottom:12px}
+.getapp .qrs{display:flex;gap:12px;flex-wrap:wrap}
+.getapp .qr{width:104px;text-align:center;font-size:11.5px;color:var(--text-soft);line-height:1.3}
+.getapp .qr img{display:block;width:104px;height:104px;background:#fff;border:1px solid var(--line);border-radius:8px;padding:5px}
+.getapp .qr span{display:block;margin-top:5px}
+.getapp .dl-btn{display:inline-block;margin-top:12px;background:var(--accent);color:#fff;border-radius:9px;padding:9px 18px;font-size:14px;font-weight:600}
+.getapp .dl-btn:hover{text-decoration:none;opacity:.9}
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/hu/" dir="ltr">VEGA<span>VIT</span></a>
+    <div class="head-sp"></div>
+    <nav class="langs"><a href="/lambit2fa/privacy/en/">EN</a><a href="/lambit2fa/privacy/">RU</a><a href="/lambit2fa/privacy/es/">ES</a><a href="/lambit2fa/privacy/ar/">AR</a><a href="/lambit2fa/privacy/de/">DE</a><a href="/lambit2fa/privacy/pt/">PT</a><a href="/lambit2fa/privacy/zh/">ZH</a><a href="/lambit2fa/privacy/fi/">FI</a><a href="/lambit2fa/privacy/fr/">FR</a><a href="/lambit2fa/privacy/nl/">NL</a><a href="/lambit2fa/privacy/id/">ID</a><a href="/lambit2fa/privacy/hi/">HI</a><a href="/lambit2fa/privacy/ja/">JA</a><a href="/lambit2fa/privacy/ko/">KO</a><a href="/lambit2fa/privacy/tr/">TR</a><a href="/lambit2fa/privacy/vi/">VI</a><a href="/lambit2fa/privacy/it/">IT</a><a href="/lambit2fa/privacy/pl/">PL</a><a href="/lambit2fa/privacy/ro/">RO</a><a href="/lambit2fa/privacy/el/">EL</a><a href="/lambit2fa/privacy/hu/" class="on">HU</a><a href="/lambit2fa/privacy/bg/">BG</a></nav>
+  </div>
+</header>
+<main class="wrap">
+<article class="doc">
+<h1>A lambit2FA adatvédelmi szabályzata</h1>
+<p class="meta"><strong>Hatálybalépés:</strong> 2026. augusztus 17.<br>
+<strong>Utolsó frissítés:</strong> 2026. szeptember 14.</p>
+<hr>
+<h2>Röviden</h2>
+<p>A lambit2FA <strong>semmilyen információt nem gyűjt Önről</strong>: sem személyes adatot,
+sem anonimizált statisztikát, sem analitikát, sem összeomlási jelentést.</p>
+<p>Minden, amit az alkalmazásba felvesz, az Ön eszközén marad. Ha bekapcsolja
+a szinkronizálást, az eszközei a mi kiszolgálónkon keresztül cserélnek bejegyzéseket.
+Ezek a bejegyzések az Ön saját kulcsával vannak titkosítva: nem tudjuk elolvasni őket, és
+nem tudjuk, kiéi. Amíg a szinkronizálás ki van kapcsolva, az alkalmazás
+egyáltalán nem lép kapcsolatba a kiszolgálónkkal.</p>
+<p>Az alkalmazás két okból lép hálózatra: az óra ellenőrzésére, legfeljebb naponta
+egyszer (5. szakasz), és szinkronizálásra, ha azt bekapcsolta (6. szakasz).</p>
+<hr>
+<h2>1. Ki kezeli az adatokat</h2>
+<p>Adatkezelő: <strong>VEGAVIT EOOD, ЕИК 207380781</strong><br>
+Cím: ul. Pleven 6, Plovdiv 4000, Bulgária (Európai Unió)<br>
+E-mail: <a href="mailto:support@lambit.eu">support@lambit.eu</a></p>
+<hr>
+<h2>2. Milyen adatokat ad meg az alkalmazásban</h2>
+<p>Az ellenőrző kódok előállításához az alkalmazás tárolja:</p>
+<table>
+<thead><tr><th>Adat</th><th>Mire való</th></tr></thead>
+<tbody>
+<tr><td>A fiók titkos kulcsa</td><td>Ebből számítja ki az egyszer használatos kódot</td></tr>
+<tr><td>A szolgáltatás neve és a bejelentkezési név vagy e-mail</td><td>Hogy meg tudja különböztetni a fiókjait</td></tr>
+<tr><td>A kód beállításai: algoritmus, hossz, időköz, számláló</td><td>Hogy a kód egyezzen a szolgáltatás által várttal</td></tr>
+<tr><td>Az alkalmazás beállításai: téma, rendezés, zár</td><td>Megjelenés és viselkedés</td></tr>
+</tbody>
+</table>
+<p><strong>Olvasható formában ezek az adatok soha nem hagyják el az eszközt.</strong> Nem kapjuk meg,
+nem látjuk és nem tudjuk helyreállítani őket. Ha a szinkronizálás be van kapcsolva,
+titkosítva kerülnek a kiszolgálónkra — olyan kulccsal, amely nálunk nincs meg (6. szakasz).</p>
+<hr>
+<h2>3. Hol tárolódnak</h2>
+<ul>
+<li><strong>iOS és macOS:</strong> a rendszer kulcskarikáján (Keychain), „az első feloldás után,
+csak ezen az eszközön” hozzáférési szinttel. Ebből következik, hogy az adatok
+<strong>nem</strong> kerülnek az iCloud biztonsági mentésbe, és <strong>nem</strong> kerülnek át
+automatikusan új eszközre.</li>
+<li><strong>Android:</strong> AES-256-tal titkosított helyi adatbázisban. A titkosító kulcs
+a hardveres Android Keystore-ban van. Az automatikus feltöltés
+a Google Drive-ra ki van kapcsolva (<code>allowBackup=false</code>).</li>
+</ul>
+<hr>
+<h2>4. Amit az alkalmazás NEM tesz</h2>
+<ul>
+<li>nem küldi el sehová olvasható formában a kódjait és kulcsait, nekünk sem;</li>
+<li>nem lép kapcsolatba külső szolgáltatásokkal az óra ellenőrzésén kívül (5. szakasz);</li>
+<li>nem lép kapcsolatba a kiszolgálónkkal, amíg be nem kapcsolja a szinkronizálást;</li>
+<li>nem használ analitikát, számlálókat, hirdetési vagy követő könyvtárakat;</li>
+<li>nem gyűjt összeomlási jelentéseket;</li>
+<li>nem olvassa a címjegyzéket, a helyadatokat, a naptárt, a fényképeket és a híváslistát;</li>
+<li>nem jelenít meg hirdetést;</li>
+<li>nem ad át és nem ad el adatot harmadik félnek: nincs Önről olvasható
+adatunk.</li>
+</ul>
+<hr>
+<h2>5. Hálózatra lépés: az óra ellenőrzése</h2>
+<p>A kód az aktuális időből számítódik. Az elcsúszott óra olyan kódokat ad,
+amelyek nem működnek, és az ember azt gondolja, hogy az alkalmazás elromlott.
+Ezért az alkalmazás időnként — legfeljebb naponta egyszer — megkérdezi a pontos időt
+néhány nagy webhelytől (apple.com, google.com, duckduckgo.com, wikipedia.org,
+cloudflare.com), és a válaszból csak az időbélyeget olvassa ki.</p>
+<p><strong>Mi hagyja el az eszközt:</strong> maga a kérés ténye, vagyis az Ön
+hálózati címe, ugyanúgy, mint bármely weboldal megnyitásakor. Kód, kulcs,
+szolgáltatásnév és eszközazonosító nem kerül továbbításra — a kérés
+semmit sem tartalmaz a kérésen kívül.</p>
+<p><strong>Miért épp ezek a címek:</strong> a telefon nélkülünk is folyamatosan kapcsolatban áll velük.
+A velük való kapcsolat semmi újat nem árul el Önről.</p>
+<p>A korrekció kikapcsolható: „Beállítások” → „Idő” → „Ne alkalmazza a korrekciót”.</p>
+<hr>
+<h2>6. Szinkronizálás az eszközök között</h2>
+<p>A szinkronizálás ki van kapcsolva, amíg be nem kapcsolja. Amíg ki van kapcsolva,
+az alkalmazás egyáltalán nem lép kapcsolatba a kiszolgálónkkal.</p>
+<p>Ha bekapcsolta:</p>
+<ul>
+<li>a bejegyzés az Ön eszközén titkosítva kerül a kiszolgálóra, olyan kulccsal,
+amely akkor jön létre, amikor a saját eszközeit összekapcsolja egymással.
+A kulcs rajtuk marad, és nem jut el hozzánk;</li>
+<li>a kiszolgáló csak egy bájtsorozatot és a kulcsából számított
+postafiókszámot lát. Nem kap nevet, e-mailt és eszközazonosítót —
+ezek nincsenek meg nálunk;</li>
+<li><strong>a hálózati cím, ahonnan a kérés érkezett, nem kerül rögzítésre.</strong> A kérésnapló
+szándékosan ki van kapcsolva. A címre a hálózatnak van szüksége a válasz
+kézbesítéséhez, és pontosan addig létezik, ameddig a kérés tart;</li>
+<li>a bejegyzések maguktól lejárnak: a 400 napnál régebbieket a kiszolgáló
+már nem adja ki, és törli.</li>
+</ul>
+<p>Kérésre történő törlés nincs — sem Önnek, sem nekünk. A postafiók nem töltődik
+tovább, ha kikapcsolja a szinkronizálást, és idővel lejár.
+A felhő nem helyettesíti a biztonsági mentést: azt tartalmazza, amit az eszközei
+cserélnek, nem a jövőnek szóló archívumot.</p>
+<hr>
+<h2>7. Az eszköz engedélyei</h2>
+<p><strong>Kamera</strong> — csak akkor kéri, ha Ön maga nyomja meg a „Beolvasás” gombot.
+QR-kód felismerésére szolgál. A kép a memóriában kerül feldolgozásra,
+és sehová nem menti el és nem küldi el.
+Az engedélyt megtagadhatja: a titkos kulcs kézzel is beírható.</p>
+<p><strong>Face ID, Touch ID, ujjlenyomat</strong> — csak az alkalmazás feloldásához.
+Az ellenőrzést az operációs rendszer végzi; az alkalmazás csak egy
+„igen” vagy „nem” választ kap, és soha nem fér hozzá a biometrikus mintákhoz.</p>
+<p><strong>Fájlhozzáférés</strong> — csak azokhoz a fájlokhoz, amelyeket Ön maga választott ki
+a rendszer párbeszédablakában, és csak biztonsági mentés olvasására vagy írására.</p>
+<hr>
+<h2>8. Biztonsági mentések</h2>
+<p>A biztonsági mentést Ön készíti, és Ön dönti el, hová küldi.</p>
+<p>A fájl az eszközön titkosítódik, <strong>mielőtt</strong> elhagyná azt: AES-256-CBC,
+a kulcs az Ön jelszavából származik PBKDF2-HMAC-SHA256 eljárással és 10 000
+iterációval, a sértetlenséget HMAC-SHA256 igazolja. A jelszó sehol sem
+tárolódik — sem az eszközön, sem nálunk.</p>
+<p><strong>Az elfelejtett jelszó a mentés végleges elvesztését jelenti.</strong> Ez nem
+hiányosság, hanem a valódi titkosítás közvetlen következménye: nincs
+kerülőút, sem Önnek, sem nekünk.</p>
+<p>Ha a mentést e-mailben vagy üzenetküldőn át küldi el, az átvitt fájlra
+az Ön által használt szolgáltatás szabályai vonatkoznak. Ezekre nincs befolyásunk.</p>
+<hr>
+<h2>9. Gyermekek</h2>
+<p>Az alkalmazás nem gyermekeknek készült, és senkiről, a gyermekeket is beleértve,
+nem gyűjt információt: sem nevet, sem életkort, sem más, személyre vonatkozó adatot.
+A korhatár-besorolás a feladat jellege miatt van beállítva,
+nem a tartalom miatt.</p>
+<hr>
+<h2>10. Az Ön jogai</h2>
+<p>A titkos kulcsok, szolgáltatásnevek és beállítások az Ön eszközén vannak. Nálunk
+nincsenek meg, ezért a hozzáférés, a helyesbítés vagy a törlés kérése tőlünk
+nem szükséges és technikailag lehetetlen.</p>
+<p>Mindent törölhet az eszközön saját maga, azonnal:
+„Beállítások” → „Minden fiók törlése”, vagy az alkalmazás eltávolításával az eszközről.</p>
+<p>Ha a szinkronizálás be van kapcsolva, az eszközeiről származó titkosított bejegyzések
+a kiszolgálónkon vannak. Nem tudjuk elolvasni őket, és nincs mivel személyhez
+kötni: nem kapunk nevet, e-mailt és eszközazonosítót, és nem rögzítünk
+hálózati címeket. Ezek a bejegyzések kérésre nem törölhetők,
+sem Önnek, sem nekünk (6. szakasz); idővel lejárnak.
+Kapcsolja ki a szinkronizálást, és a postafiók nem töltődik tovább.</p>
+<p>A GDPR (EU), a CCPA (Kalifornia) és az 152-FZ szövetségi törvény (Oroszország) szerinti jogok
+magából az elrendezésből adódóan érvényesülnek: a mi oldalunkon nem keletkezik olyan adat,
+amely alapján egy személy azonosítható lenne.</p>
+<hr>
+<h2>11. A szabályzat módosításai</h2>
+<p>Ha a szabályzat változik, a frissített változat ugyanezen a címen jelenik meg
+új dátummal. A lényeges változásokat a kiadási megjegyzésekben jelezzük,
+mielőtt hatályba lépnének.</p>
+<hr>
+<h2>12. Kapcsolat</h2>
+<p>Adatvédelmi kérdések és sebezhetőségi bejelentések:
+<strong><a href="mailto:support@lambit.eu">support@lambit.eu</a></strong></p>
+<p>Kérjük, a sebezhetőségeket e-mailben jelentse, és ne hozza nyilvánosságra őket
+a javítás megjelenése előtt.</p>
+</article>
+
+<section class="getapp">
+  <!-- lambit2FA: плашка и QR, собирает tools/build_plaque.py -->
+  <h2><a href="/lambit2fa/download/hu/">lambit2FA — kétlépcsős bejelentkezési kódok</a></h2>
+  <p>Minden platformon: iPhone, iPad, Apple Watch, Mac, Android, Wear OS órák, Windows, Linux. A kódjai Önnél maradnak.</p>
+  <div class="qrs">
+    <div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad és Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad és Apple Watch — App Store</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android és Wear OS órák — Google Play" width="104" height="104"><span>Android és Wear OS órák — Google Play</span></div>
+    <div class="qr"><img src="/lambit2fa/download/qr/android-apk.svg" alt="Android — APK-fájl erről az oldalról" width="104" height="104"><span>Android — APK-fájl erről az oldalról</span></div>
+  </div>
+  <p style="margin:12px 0 0">Irányítsa a telefon kameráját a QR-kódra</p>
+  <a class="dl-btn" href="/lambit2fa/download/hu/">Letöltés</a>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · Plovdiv, Bulgária · <a href="/hu/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>
