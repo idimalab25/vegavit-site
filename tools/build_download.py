@@ -14,8 +14,10 @@
 
 Сами файлы программы (AppImage и прочее) в репозиторий НЕ кладутся: они
 десятки мегабайт. Их место — /var/www/vegavit/lambit2fa/download/files/,
-кладёт хозяин. Строка файла рисуется только если файл реально есть
-в store/build/site — чтобы на сайте не было ссылок в пустоту.
+кладёт хозяин. Строка файла, подпись и QR для APK и Windows ZIP рисуются только если файл
+реально есть в store/build/site — чтобы на сайте не было ни ссылок в пустоту,
+ни обещаний «файл с сайта» без файла (решение хозяина 10.10.2026: пока файлов
+нет, Android и Windows — только через магазины).
 
 Запуск:  python3 tools/build_download.py --src ~/lambit2FAlinux/AEFauthentic/store
 """
@@ -152,7 +154,7 @@ def page(code, t, linux_text, have, priv_label):
   <h2>{esc(t['p_android'])}</h2>
   <div class="row">
     {qr_block('android-google-play', t['p_android'])}
-    {qr_block('android-apk', t['p_apk'])}
+    {qr_block('android-apk', t['p_apk']) if have.get('apk') else ''}
     <div class="col">
       <a class="store" href="{STORE_PLAY}">Google Play</a>
       <p class="note">{esc(t['scan_hint'])}</p>
@@ -166,10 +168,10 @@ def page(code, t, linux_text, have, priv_label):
   <h2>{esc(t['p_winstore'])}</h2>
   <div class="row">
     {qr_block('windows-store', t['p_winstore'])}
-    {qr_block('windows-zip', t['p_winzip'])}
+    {qr_block('windows-zip', t['p_winzip']) if have.get('win') else ''}
     <div class="col">
       <a class="store" href="{STORE_MS}">Microsoft Store</a>
-      <p class="note">{esc(t['p_winzip'])}</p>
+      {('<p class="note">' + esc(t['p_winzip']) + '</p>') if have.get('win') else ''}
       {win}
     </div>
   </div>

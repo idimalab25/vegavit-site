@@ -20,7 +20,10 @@ import re
 from pathlib import Path
 
 QRS = [('iphone-app-store', 'p_iphone'), ('mac-app-store', 'p_mac'),
-       ('android-google-play', 'p_android'), ('android-apk', 'p_apk')]
+       ('android-google-play', 'p_android')]
+# QR на APK показывается только когда сам файл APK лежит в store/build/site:
+# пока его нет, Android — только через Google Play (хозяин, 10.10.2026).
+QR_APK = ('android-apk', 'p_apk')
 LANGS = 'en ru es ar de pt zh fi fr nl id hi ja ko tr vi it pl ro el hu bg'.split()
 # Английская политика — та, что вписана в кабинет Apple: её не трогаем вовсе.
 SKIP = {'en'}
@@ -112,6 +115,8 @@ def main():
     a = ap.parse_args()
     src, out = Path(a.src).expanduser(), Path(a.out).expanduser()
     S = json.loads((src / 'site' / 'site_strings.json').read_text(encoding='utf-8'))
+    if list((src / 'build' / 'site').glob('*.apk')):
+        QRS.append(QR_APK)
     for code in LANGS:
         if code in SKIP:
             continue

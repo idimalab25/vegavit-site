@@ -33,7 +33,10 @@ RTL = {'ar'}
 PRIVACY = {'ru': '/lambit2fa/privacy/', 'bg': '/lambit2fa/privacy/bg/',
            'en': '/lambit2fa/privacy/en/'}
 QRS = [('iphone-app-store', 'p_iphone'), ('mac-app-store', 'p_mac'),
-       ('android-google-play', 'p_android'), ('android-apk', 'p_apk')]
+       ('android-google-play', 'p_android')]
+# QR на APK показывается только когда сам файл APK лежит в store/build/site:
+# пока его нет, Android — только через Google Play (хозяин, 10.10.2026).
+QR_APK = ('android-apk', 'p_apk')
 # Проекты: адреса не переводятся, тексты — ключами из i18n.
 # Ключи, которые обязан дать перевод сайта. Надписи плашки и подписи QR
 # сюда не входят: они приходят из site_strings.json проекта приложения.
@@ -210,6 +213,8 @@ def main():
     a = ap.parse_args()
     src, out = Path(a.src).expanduser(), Path(a.out).expanduser()
     strings = json.loads((src / 'site' / 'site_strings.json').read_text(encoding='utf-8'))
+    if list((src / 'build' / 'site').glob('*.apk')):
+        QRS.append(QR_APK)
     css = (out / 'tools' / 'site.css').read_text(encoding='utf-8')
     base = json.loads((out / 'i18n' / 'en.json').read_text(encoding='utf-8'))
 
