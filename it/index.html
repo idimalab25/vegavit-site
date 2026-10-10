@@ -169,6 +169,11 @@
   .feats { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 5px; font-size: 14px; }
   .feats li { padding-inline-start: 24px; position: relative; }
   .feats li::before { content: "✓"; position: absolute; inset-inline-start: 0; top: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: 10px; font-weight: 700; text-align: center; line-height: 16px; }
+
+  /* скриншоты в плашке lambit2FA */
+  .plaque-shots { flex-basis: 100%; display: flex; gap: 10px; overflow-x: auto; padding: 6px 2px 8px; scroll-snap-type: x mandatory; }
+  .plaque-shots img { flex: 0 0 auto; height: 340px; width: auto; border-radius: 12px; border: 1px solid var(--line); background: #fff; scroll-snap-align: start; }
+  @media (max-width: 560px) { .plaque-shots img { height: 280px; } }
 </style>
 </head>
 <body data-theme="light">
@@ -213,6 +218,7 @@
         </a>
         <div class="qrs"><div class="qr"><img src="/lambit2fa/download/qr/iphone-app-store.svg" alt="iPhone, iPad e Apple Watch — App Store" width="104" height="104"><span>iPhone, iPad e Apple Watch — App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/mac-app-store.svg" alt="Mac — Mac App Store" width="104" height="104"><span>Mac — Mac App Store</span></div><div class="qr"><img src="/lambit2fa/download/qr/android-google-play.svg" alt="Android e orologi Wear OS — Google Play" width="104" height="104"><span>Android e orologi Wear OS — Google Play</span></div></div>
         <div class="scan-hint">Inquadra il codice QR con la fotocamera del telefono</div>
+        <div class="plaque-shots"><img src="/lambit2fa/download/shots/en/01-codes.jpg" alt=""><img src="/lambit2fa/download/shots/en/02-groups.jpg" alt=""><img src="/lambit2fa/download/shots/en/03-backups.jpg" alt=""><img src="/lambit2fa/download/shots/en/04-settings.jpg" alt=""><img src="/lambit2fa/download/shots/en/05-import.jpg" alt=""><img src="/lambit2fa/download/shots/en/06-export.jpg" alt=""></div>
         <a class="priv" href="/lambit2fa/privacy/it/">Informativa sulla privacy</a>
       </div>
 

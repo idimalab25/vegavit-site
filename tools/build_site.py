@@ -66,7 +66,7 @@ def privacy_for(code):
     return '/lambit2fa/privacy/' if code == 'ru' else f'/lambit2fa/privacy/{code}/'
 
 
-def page(code, t, s, css):
+def page(code, t, s, css, shots):
     tag = TAG.get(code, code)
     dir_attr = ' dir="rtl"' if code in RTL else ''
     alts = '\n'.join(f'<link rel="alternate" hreflang="{TAG.get(c, c)}" href="https://vegavit.eu{url_for(c)}">'
@@ -149,6 +149,7 @@ def page(code, t, s, css):
         </a>
         <div class="qrs">{qrs}</div>
         <div class="scan-hint">{esc(s['scan_hint'])}</div>
+        <div class="plaque-shots">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="">' for n in shots[1])}</div>
         <a class="priv" href="{privacy_for(code)}">{esc(t['privLink'])}</a>
       </div>
 
@@ -235,9 +236,13 @@ def main():
         if gaps:
             missing.append(f'{code}({",".join(gaps[:3])}…)')
             continue
+        # скриншоты из App Store: локализованный набор, если есть, иначе английский
+        shots_dir = out / 'lambit2fa' / 'download' / 'shots'
+        lang_dir = code if any((shots_dir / code).glob('*.jpg')) else 'en'
+        shots = (lang_dir, sorted(f.name for f in (shots_dir / lang_dir).glob('*.jpg')))
         d = out / ('' if code == DEFAULT_LANG else code)
         d.mkdir(parents=True, exist_ok=True)
-        (d / 'index.html').write_text(page(code, t, strings[code], css), encoding='utf-8')
+        (d / 'index.html').write_text(page(code, t, strings[code], css, shots), encoding='utf-8')
         done.append(code)
     print('собрано:', ' '.join(done))
     if missing:
