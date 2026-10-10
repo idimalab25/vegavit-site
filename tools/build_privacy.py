@@ -122,6 +122,8 @@ def main():
         h = head.replace('<html lang="en">', f'<html lang="{tag}"{" dir=\"rtl\"" if code in RTL else ""}>')
         h = re.sub(r'<title>.*?</title>', f'<title>{tr["title"]}</title>', h)
         h = re.sub(r'<meta name="description" content="[^"]*">', f'<meta name="description" content="{tr["desc"]}">', h)
+        # 22 кнопки языков в одну строку не помещаются — переносим
+        h = h.replace('</style>', '.langs{flex-wrap:wrap;justify-content:flex-end}\n</style>', 1)
         langs = ''.join(f'<a href="{privacy_url(c)}"{" class=\"on\"" if c == code else ""}>{c.upper()}</a>' for c in NAMES)
         page = h + f"""<body>
 
