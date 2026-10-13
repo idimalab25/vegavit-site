@@ -25,5 +25,7 @@
   "f_nologin": "Tanpa login",
   "f_anon": "Anonimitas penuh",
   "f_watch": "Kode di jam tangan pintar Anda",
-  "shots_title": "Seperti apa tampilannya"
+  "shots_title": "Seperti apa tampilannya",
+  "gh_release": "Rilis di GitHub",
+  "sha_file": "checksum"
 }

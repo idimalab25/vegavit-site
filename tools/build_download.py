@@ -33,6 +33,7 @@ STORE_IPHONE = 'https://apps.apple.com/app/id6810931003'
 STORE_MAC = 'https://apps.apple.com/app/id6810931003?platform=mac'
 STORE_PLAY = 'https://play.google.com/store/apps/details?id=com.lambit.keys2fa'
 STORE_MS = 'https://apps.microsoft.com/detail/9PK7LTD3L3NJ'
+GH_RELEASE = 'https://github.com/idimalab25/lambit2FA-releases/releases/tag/linux-1.1'
 FILES_URL = '/lambit2fa/download/files/'
 PRIVACY = {'ru': '/lambit2fa/privacy/', 'bg': '/lambit2fa/privacy/bg/', 'en': '/lambit2fa/privacy/en/'}
 
@@ -111,11 +112,12 @@ def qr_block(name, caption):
             f'width="124" height="124"><span>{esc(caption)}</span></div>')
 
 
-def files_block(files, sha_hint):
+def files_block(files, sha_hint, sha_label='checksum'):
     if not files:
         return ''
     items = ''.join(
-        f'<li><a href="{FILES_URL}{n}">{esc(n)}</a> <span class="sha">SHA-256: {h}</span></li>'
+        f'<li><a href="{FILES_URL}{n}">{esc(n)}</a> · <a href="{FILES_URL}{n}.sha256">{esc(sha_label)} .sha256</a> '
+        f'<span class="sha">SHA-256: {h}</span></li>'
         for n, h in files)
     return f'<p class="note">{esc(sha_hint)}</p><ul class="files">{items}</ul>'
 
@@ -155,7 +157,7 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
   </div>
 </section>""")
     # Android: Google Play + APK
-    apk = files_block(have.get('apk', []), t['sha_hint'])
+    apk = files_block(have.get('apk', []), t['sha_hint'], site_t['sha_file'])
     blocks.append(f"""<section class="plat" id="android">
   <h2>{esc(t['p_android'])}</h2>
   <div class="row">
@@ -169,7 +171,7 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
   </div>
 </section>""")
     # Windows: магазин + архивы
-    win = files_block(have.get('win', []), t['sha_hint'])
+    win = files_block(have.get('win', []), t['sha_hint'], site_t['sha_file'])
     blocks.append(f"""<section class="plat" id="windows">
   <h2>{esc(t['p_winstore'])}</h2>
   <div class="row">
@@ -183,13 +185,14 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
   </div>
 </section>""")
     # Linux
-    lin = files_block(have.get('linux', []), t['sha_hint'])
+    lin = files_block(have.get('linux', []), t['sha_hint'], site_t['sha_file'])
     blocks.append(f"""<section class="plat" id="linux">
   <h2>{esc(t['p_linux'])}</h2>
   <div class="row">
     {qr_block('linux', t['p_linux'])}
     <div class="col">
       {lin}
+      <p class="note"><a href="{GH_RELEASE}">{esc(site_t['gh_release'])}</a></p>
     </div>
   </div>
   <pre class="plain">{esc(linux_text.strip())}</pre>

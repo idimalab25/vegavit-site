@@ -25,5 +25,7 @@
   "f_nologin": "Nincs bejelentkezés",
   "f_anon": "Teljes névtelenség",
   "f_watch": "Kódok az okosóráján",
-  "shots_title": "Így néz ki"
+  "shots_title": "Így néz ki",
+  "gh_release": "Kiadás a GitHubon",
+  "sha_file": "ellenőrzőösszeg"
 }

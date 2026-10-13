@@ -25,5 +25,7 @@
   "f_nologin": "Sin inicio de sesión",
   "f_anon": "Anonimato total",
   "f_watch": "Códigos en tu reloj inteligente",
-  "shots_title": "Así se ve"
+  "shots_title": "Así se ve",
+  "gh_release": "Versión en GitHub",
+  "sha_file": "suma de comprobación"
 }

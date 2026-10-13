@@ -25,5 +25,7 @@
   "f_nologin": "Fără autentificare",
   "f_anon": "Anonimat complet",
   "f_watch": "Coduri pe ceasul tău inteligent",
-  "shots_title": "Cum arată"
+  "shots_title": "Cum arată",
+  "gh_release": "Versiunea pe GitHub",
+  "sha_file": "sumă de control"
 }

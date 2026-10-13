@@ -25,5 +25,7 @@
   "f_nologin": "Ei kirjautumista",
   "f_anon": "Täysi nimettömyys",
   "f_watch": "Koodit älykellossasi",
-  "shots_title": "Miltä se näyttää"
+  "shots_title": "Miltä se näyttää",
+  "gh_release": "Julkaisu GitHubissa",
+  "sha_file": "tarkistussumma"
 }

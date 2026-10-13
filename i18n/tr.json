@@ -25,5 +25,7 @@
   "f_nologin": "Giriş yok",
   "f_anon": "Tam anonimlik",
   "f_watch": "Akıllı saatinizde kodlar",
-  "shots_title": "Nasıl görünüyor"
+  "shots_title": "Nasıl görünüyor",
+  "gh_release": "GitHub’daki sürüm",
+  "sha_file": "sağlama toplamı"
 }

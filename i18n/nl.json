@@ -25,5 +25,7 @@
   "f_nologin": "Geen login",
   "f_anon": "Volledige anonimiteit",
   "f_watch": "Codes op je smartwatch",
-  "shots_title": "Zo ziet het eruit"
+  "shots_title": "Zo ziet het eruit",
+  "gh_release": "Release op GitHub",
+  "sha_file": "controlesom"
 }

@@ -25,5 +25,7 @@
   "f_nologin": "Nessun login",
   "f_anon": "Anonimato completo",
   "f_watch": "Codici sul tuo smartwatch",
-  "shots_title": "Come si presenta"
+  "shots_title": "Come si presenta",
+  "gh_release": "Release su GitHub",
+  "sha_file": "somma di controllo"
 }

@@ -34,5 +34,7 @@
   "f_nologin": "No login",
   "f_anon": "Complete anonymity",
   "f_watch": "Codes on your smartwatch",
-  "shots_title": "What it looks like"
+  "shots_title": "What it looks like",
+  "gh_release": "Release on GitHub",
+  "sha_file": "checksum"
 }

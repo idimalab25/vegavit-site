@@ -25,5 +25,7 @@
   "f_nologin": "로그인 없음",
   "f_anon": "완전한 익명성",
   "f_watch": "스마트워치에서 코드 확인",
-  "shots_title": "앱 화면"
+  "shots_title": "앱 화면",
+  "gh_release": "GitHub 릴리스",
+  "sha_file": "체크섬"
 }

@@ -25,5 +25,7 @@
   "f_nologin": "无需登录",
   "f_anon": "完全匿名",
   "f_watch": "智能手表上的验证码",
-  "shots_title": "应用界面"
+  "shots_title": "应用界面",
+  "gh_release": "GitHub 上的发行版",
+  "sha_file": "校验和"
 }

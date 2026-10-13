@@ -25,5 +25,7 @@
   "f_nologin": "ログイン不要",
   "f_anon": "完全な匿名性",
   "f_watch": "スマートウォッチにコードを表示",
-  "shots_title": "アプリの画面"
+  "shots_title": "アプリの画面",
+  "gh_release": "GitHub のリリース",
+  "sha_file": "チェックサム"
 }

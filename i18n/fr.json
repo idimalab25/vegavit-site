@@ -25,5 +25,7 @@
   "f_nologin": "Pas de connexion",
   "f_anon": "Anonymat complet",
   "f_watch": "Vos codes sur votre montre connectée",
-  "shots_title": "À quoi ça ressemble"
+  "shots_title": "À quoi ça ressemble",
+  "gh_release": "Version sur GitHub",
+  "sha_file": "somme de contrôle"
 }

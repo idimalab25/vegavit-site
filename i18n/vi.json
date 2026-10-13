@@ -25,5 +25,7 @@
   "f_nologin": "Không cần đăng nhập",
   "f_anon": "Hoàn toàn ẩn danh",
   "f_watch": "Mã trên đồng hồ thông minh của bạn",
-  "shots_title": "Giao diện ứng dụng"
+  "shots_title": "Giao diện ứng dụng",
+  "gh_release": "Bản phát hành trên GitHub",
+  "sha_file": "mã kiểm tra"
 }
