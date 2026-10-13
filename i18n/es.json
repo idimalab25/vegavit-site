@@ -27,5 +27,7 @@
   "f_watch": "Códigos en tu reloj inteligente",
   "shots_title": "Así se ve",
   "gh_release": "Versión en GitHub",
-  "sha_file": "suma de comprobación"
+  "sha_file": "suma de comprobación",
+  "apk_dl": "Descargar APK",
+  "apk_note": "instalación fuera de Google Play"
 }

@@ -27,5 +27,7 @@
   "f_watch": "スマートウォッチにコードを表示",
   "shots_title": "アプリの画面",
   "gh_release": "GitHub のリリース",
-  "sha_file": "チェックサム"
+  "sha_file": "チェックサム",
+  "apk_dl": "APK をダウンロード",
+  "apk_note": "Google Play を使わないインストール"
 }

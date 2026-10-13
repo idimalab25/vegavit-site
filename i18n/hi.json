@@ -27,5 +27,7 @@
   "f_watch": "आपकी स्मार्टवॉच पर कोड",
   "shots_title": "यह कैसा दिखता है",
   "gh_release": "GitHub पर रिलीज़",
-  "sha_file": "चेकसम"
+  "sha_file": "चेकसम",
+  "apk_dl": "APK डाउनलोड करें",
+  "apk_note": "Google Play के बाहर इंस्टॉल"
 }

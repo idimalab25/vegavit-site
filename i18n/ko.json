@@ -27,5 +27,7 @@
   "f_watch": "스마트워치에서 코드 확인",
   "shots_title": "앱 화면",
   "gh_release": "GitHub 릴리스",
-  "sha_file": "체크섬"
+  "sha_file": "체크섬",
+  "apk_dl": "APK 다운로드",
+  "apk_note": "Google Play 없이 설치"
 }

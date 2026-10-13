@@ -27,5 +27,7 @@
   "f_watch": "Vos codes sur votre montre connectée",
   "shots_title": "À quoi ça ressemble",
   "gh_release": "Version sur GitHub",
-  "sha_file": "somme de contrôle"
+  "sha_file": "somme de contrôle",
+  "apk_dl": "Télécharger l’APK",
+  "apk_note": "installation hors Google Play"
 }

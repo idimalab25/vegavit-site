@@ -27,5 +27,7 @@
   "f_watch": "Kode di jam tangan pintar Anda",
   "shots_title": "Seperti apa tampilannya",
   "gh_release": "Rilis di GitHub",
-  "sha_file": "checksum"
+  "sha_file": "checksum",
+  "apk_dl": "Unduh APK",
+  "apk_note": "pemasangan di luar Google Play"
 }

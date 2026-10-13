@@ -27,5 +27,7 @@
   "f_watch": "Códigos no seu smartwatch",
   "shots_title": "Como é por dentro",
   "gh_release": "Versão no GitHub",
-  "sha_file": "soma de verificação"
+  "sha_file": "soma de verificação",
+  "apk_dl": "Baixar APK",
+  "apk_note": "instalação fora do Google Play"
 }

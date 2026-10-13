@@ -27,5 +27,7 @@
   "f_watch": "智能手表上的验证码",
   "shots_title": "应用界面",
   "gh_release": "GitHub 上的发行版",
-  "sha_file": "校验和"
+  "sha_file": "校验和",
+  "apk_dl": "下载 APK",
+  "apk_note": "不经 Google Play 安装"
 }

@@ -27,5 +27,7 @@
   "f_watch": "Mã trên đồng hồ thông minh của bạn",
   "shots_title": "Giao diện ứng dụng",
   "gh_release": "Bản phát hành trên GitHub",
-  "sha_file": "mã kiểm tra"
+  "sha_file": "mã kiểm tra",
+  "apk_dl": "Tải APK",
+  "apk_note": "cài đặt không qua Google Play"
 }

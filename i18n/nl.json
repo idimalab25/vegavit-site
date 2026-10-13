@@ -27,5 +27,7 @@
   "f_watch": "Codes op je smartwatch",
   "shots_title": "Zo ziet het eruit",
   "gh_release": "Release op GitHub",
-  "sha_file": "controlesom"
+  "sha_file": "controlesom",
+  "apk_dl": "APK downloaden",
+  "apk_note": "installatie buiten Google Play om"
 }

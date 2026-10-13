@@ -166,6 +166,7 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
     <div class="col">
       <a class="store" href="{STORE_PLAY}">Google Play</a>
       <p class="note">{esc(t['scan_hint'])}</p>
+      {('<p><a class="store" href="' + FILES_URL + have['apk'][0][0] + '">' + esc(site_t['apk_dl']) + '</a> <span class="note">' + esc(site_t['apk_note']) + '</span></p>') if have.get('apk') else ''}
       {apk}
     </div>
   </div>

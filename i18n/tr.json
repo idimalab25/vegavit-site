@@ -27,5 +27,7 @@
   "f_watch": "Akıllı saatinizde kodlar",
   "shots_title": "Nasıl görünüyor",
   "gh_release": "GitHub’daki sürüm",
-  "sha_file": "sağlama toplamı"
+  "sha_file": "sağlama toplamı",
+  "apk_dl": "APK indir",
+  "apk_note": "Google Play dışından kurulum"
 }

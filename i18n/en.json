@@ -36,5 +36,7 @@
   "f_watch": "Codes on your smartwatch",
   "shots_title": "What it looks like",
   "gh_release": "Release on GitHub",
-  "sha_file": "checksum"
+  "sha_file": "checksum",
+  "apk_dl": "Download APK",
+  "apk_note": "installation outside Google Play"
 }

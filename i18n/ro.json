@@ -27,5 +27,7 @@
   "f_watch": "Coduri pe ceasul tău inteligent",
   "shots_title": "Cum arată",
   "gh_release": "Versiunea pe GitHub",
-  "sha_file": "sumă de control"
+  "sha_file": "sumă de control",
+  "apk_dl": "Descarcă APK",
+  "apk_note": "instalare în afara Google Play"
 }

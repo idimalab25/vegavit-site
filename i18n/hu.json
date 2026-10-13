@@ -27,5 +27,7 @@
   "f_watch": "Kódok az okosóráján",
   "shots_title": "Így néz ki",
   "gh_release": "Kiadás a GitHubon",
-  "sha_file": "ellenőrzőösszeg"
+  "sha_file": "ellenőrzőösszeg",
+  "apk_dl": "APK letöltése",
+  "apk_note": "telepítés a Google Play megkerülésével"
 }

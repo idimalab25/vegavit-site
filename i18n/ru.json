@@ -36,5 +36,7 @@
   "f_watch": "Коды на ваших смарт-часах",
   "shots_title": "Как это выглядит",
   "gh_release": "Релиз на GitHub",
-  "sha_file": "контрольная сумма"
+  "sha_file": "контрольная сумма",
+  "apk_dl": "Скачать APK",
+  "apk_note": "установка вне Google Play"
 }

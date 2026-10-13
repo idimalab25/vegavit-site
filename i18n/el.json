@@ -27,5 +27,7 @@
   "f_watch": "Κωδικοί στο έξυπνο ρολόι σας",
   "shots_title": "Πώς φαίνεται",
   "gh_release": "Έκδοση στο GitHub",
-  "sha_file": "άθροισμα ελέγχου"
+  "sha_file": "άθροισμα ελέγχου",
+  "apk_dl": "Λήψη APK",
+  "apk_note": "εγκατάσταση εκτός Google Play"
 }
