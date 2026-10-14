@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jak skonfigurować swoją chmurę lambit2FA — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/pl/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl" class="on">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>Jak skonfigurować swoją chmurę lambit2FA</h1>
+<p class="intro">Chmura przenosi kody między Twoimi urządzeniami: dodasz kod na telefonie — sam pojawi się na komputerze. Konfiguruje się raz, w parę minut.</p>
+<h2>Czym jest chmura</h2>
+<p>To skrzynka pocztowa między Twoimi urządzeniami na naszym serwerze. Jedno urządzenie wkłada do niej nowy kod, drugie go odbiera. Skrzynka nie wie, czyja jest, i nie może odczytać, co jest w środku: kody są pieczętowane na Twoim urządzeniu kluczem, który nigdy nie trafia na serwer.</p>
+<p>Nie trzeba konta, e-maila ani hasła. Chmury można nie włączać — aplikacja w pełni działa i bez niej.</p>
+<h2>Krok 1. Włącz chmurę na pierwszym urządzeniu</h2>
+<p>Otwórz «Ustawienia» i włącz przełącznik «Chmura» — otworzy się ekran chmury. Stuknij «Utwórz chmurę». Aplikacja pokaże kwadrat QR, sześciocyfrową liczbę i ciąg 32 znaków — to klucz Twojej chmury. Każdy ma własną chmurę.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/pl/01-cloud-off.png"><img src="/lambit2fa/cloud/img/pl/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>Jeśli na urządzeniu są już kody, aplikacja zapyta, czy wysłać do chmury wszystkie, czy najpierw wybrać, które zostaną tylko tutaj. O tym niżej: «Kody, które nie trafiają do chmury».</p>
+<h2>Krok 2. Podłącz drugie urządzenie</h2>
+<p>Na drugim urządzeniu włącz «Chmura» w ustawieniach, stuknij «Zeskanuj kwadrat» i skieruj aparat na kwadrat z pierwszego. Drugie urządzenie poprosi o sześć cyfr — liczba w tej chwili widoczna jest na pierwszym, pod kwadratem (zmienia się co 30 sekund). Wpisz ją, stuknij «Potwierdź» — i kody przyjadą.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/pl/02-cloud-key.png"><img src="/lambit2fa/cloud/img/pl/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>Dalej wszystko dzieje się samo: nowy kod, zmiana i usunięcie docierają do pozostałych urządzeń bez jednego działania. Nic nie trzeba zapamiętywać ani zapisywać: kwadrat i liczbę można pokazać ponownie w każdej chwili — «Ustawienia» → «Zarządzaj moją chmurą» → «Pokaż kwadrat i liczbę».</p>
+<h2>Jeśli nie ma aparatu</h2>
+<p>Na komputerze stacjonarnym zamiast aparatu jest pole «Klucz chmury»: wpisz 32 znaki ręcznie (pokazane są w grupach po cztery) i stuknij «Wejdź do chmury». Potem te same sześć cyfr. Robi się to raz.</p>
+<h2>Kody, które nie trafiają do chmury</h2>
+<p>Każdy kod może zostać tylko na jednym urządzeniu — na przykład kody służbowe nie trafiają na domowy komputer. Przytrzymaj kod → «Nie wysyłaj do chmury». Taki kod dostaje na liście ikonę przekreślonej chmurki.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/pl/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/pl/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>Przy dodawaniu nowego kodu pytanie «Wysyłaj do chmury» pada zawsze; domyślnie — wysyłać. Jeśli kod był już w chmurze, a Ty go z niej zabierasz, aplikacja zapyta, czy usunąć go z pozostałych urządzeń, czy tam zostawić.</p>
+<p>Kody poza chmurą chroni tylko plik kopii: na pozostałych urządzeniach ich nie ma.</p>
+<h2>Kopię i tak zrób</h2>
+<p>Chmura to nie magazyn. Dopóki cały jest choć jeden Twój sprzęt z kodami, chmura przeniesie je na nowy. Nie został żaden — nie ma też klucza chmury, a kody da się odzyskać tylko z pliku kopii («Kopie» → «Utwórz kopię zapasową»).</p>
+<h2>Wyjście z chmury</h2>
+<p>Na ekranie «Chmura» jest «Opuść chmurę»: urządzenie zapomina klucz, kody na nim zostają całe. Samo z powrotem nie wejdzie — pokaż mu klucz z innego urządzenia jeszcze raz. Przełącznik «Chmura» w ustawieniach to co innego: tylko wstrzymuje wymianę.</p>
+<h2>Chroń klucz chmury</h2>
+<p>Kto ma klucz, ma dostęp do skrzynki. Nie pokazuj go obcym i nie fotografuj ekranu z kluczem: zrzut trafia do galerii, którą czytają inne aplikacje. Klucza nie trzeba nigdzie przechowywać — jest na Twoich urządzeniach.</p>
+<p class="more"><a href="/lambit2fa/download/pl/">Pobierz lambit2FA</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/pl/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

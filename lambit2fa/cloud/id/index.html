@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cara menyiapkan awan lambit2FA Anda — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/id/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id" class="on">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>Cara menyiapkan awan lambit2FA Anda</h1>
+<p class="intro">Awan membawa kode antar perangkat Anda: tambahkan kode di ponsel, dan ia muncul sendiri di komputer. Disiapkan sekali, dalam beberapa menit.</p>
+<h2>Apa itu awan</h2>
+<p>Ini kotak surat antar perangkat Anda di server kami. Satu perangkat menaruh kode baru di sana, perangkat lain mengambilnya. Kotak itu tidak tahu milik siapa dan tidak bisa membaca isinya: kode disegel di perangkat Anda dengan kunci yang tidak pernah dikirim ke server.</p>
+<p>Tidak perlu akun, surel, atau kata sandi. Awan boleh tidak diaktifkan — aplikasi berfungsi penuh tanpanya.</p>
+<h2>Langkah 1. Aktifkan awan di perangkat pertama</h2>
+<p>Buka «Pengaturan» dan nyalakan sakelar «Awan» — layar awan terbuka. Ketuk «Buat awan». Aplikasi menampilkan kotak QR, angka enam digit, dan deretan 32 karakter — itulah kunci awan Anda. Setiap orang punya awannya sendiri.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/id/01-cloud-off.png"><img src="/lambit2fa/cloud/img/id/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>Jika perangkat sudah punya kode, aplikasi bertanya apakah semua dikirim ke awan atau Anda memilih dulu mana yang tetap di sini saja. Lihat di bawah: «Kode yang tidak masuk ke awan».</p>
+<h2>Langkah 2. Hubungkan perangkat kedua</h2>
+<p>Di perangkat kedua, nyalakan «Awan» di pengaturan, ketuk «Pindai kotak» dan arahkan kamera ke kotak di perangkat pertama. Perangkat kedua meminta enam digit — saat itu angkanya tampil di perangkat pertama, di bawah kotak (berganti setiap 30 detik). Masukkan, ketuk «Sahkan» — dan kode pun tiba.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/id/02-cloud-key.png"><img src="/lambit2fa/cloud/img/id/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>Setelah itu semuanya otomatis: kode baru, perubahan, dan penghapusan sampai ke perangkat lain tanpa satu tindakan pun. Tidak ada yang perlu diingat atau dicatat: kotak dan angka bisa ditampilkan lagi kapan saja — «Pengaturan» → «Kelola awan saya» → «Tampilkan kotak dan angka».</p>
+<h2>Jika tidak ada kamera</h2>
+<p>Di komputer desktop, sebagai ganti kamera ada kolom «Kunci awan»: ketik 32 karakter secara manual (ditampilkan dalam kelompok empat) lalu ketuk «Masuk ke awan». Selanjutnya enam digit yang sama. Dilakukan sekali.</p>
+<h2>Kode yang tidak masuk ke awan</h2>
+<p>Kode apa pun bisa tetap di satu perangkat saja — misalnya kode kantor tidak dikirim ke komputer rumah. Tekan lama kode → «Jangan kirim ke awan». Kode seperti itu mendapat ikon awan dicoret di daftar.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/id/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/id/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>Saat menambah kode baru, pertanyaan «Kirim ke awan» selalu diajukan; bawaannya dikirim. Jika kode sudah ada di awan dan Anda mengeluarkannya, aplikasi bertanya apakah menghapusnya dari perangkat lain atau membiarkannya di sana.</p>
+<p>Kode di luar awan hanya dilindungi berkas cadangan: di perangkat lain kode itu tidak ada.</p>
+<h2>Tetap buat cadangan</h2>
+<p>Awan bukan tempat penyimpanan. Selama setidaknya satu perangkat Anda dengan kode masih utuh, awan membawanya ke perangkat baru. Jika tak satu pun tersisa, kunci awan pun hilang, dan kode hanya bisa dipulihkan dari berkas cadangan («Cadangan» → «Buat cadangan»).</p>
+<h2>Keluar dari awan</h2>
+<p>Di layar «Awan» ada «Keluar dari awan»: perangkat melupakan kunci, kode di dalamnya tetap utuh. Ia tidak akan masuk lagi sendiri — tunjukkan kunci dari perangkat lain sekali lagi. Sakelar «Awan» di pengaturan berbeda: hanya menjeda pertukaran.</p>
+<h2>Jaga kunci awan</h2>
+<p>Siapa yang punya kunci, dialah yang punya akses ke kotak. Jangan tunjukkan ke orang asing dan jangan foto layar yang menampilkannya: tangkapan layar masuk ke galeri yang bisa dibaca aplikasi lain. Kunci tidak perlu disimpan di mana pun — sudah ada di perangkat Anda.</p>
+<p class="more"><a href="/lambit2fa/download/id/">Unduh lambit2FA</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/id/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

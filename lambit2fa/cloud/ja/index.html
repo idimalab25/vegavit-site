@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lambit2FA のクラウドの設定方法 — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/ja/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja" class="on">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>lambit2FA のクラウドの設定方法</h1>
+<p class="intro">クラウドは端末間でコードを運びます。電話でコードを追加すると、パソコンにも自動で現れます。設定は一度だけ、数分で済みます。</p>
+<h2>クラウドとは</h2>
+<p>私たちのサーバー上にある、端末同士の郵便受けです。ひとつの端末が新しいコードを入れ、別の端末が取り出します。郵便受けは持ち主を知らず、中身も読めません。コードは端末上で、サーバーには決して送られない鍵で封をされます。</p>
+<p>アカウント、メール、パスワードは不要です。クラウドは使わなくても構いません。アプリはクラウドなしでも完全に動きます。</p>
+<h2>ステップ1. 最初の端末でクラウドをオンにする</h2>
+<p>「設定」を開き、「クラウド」のスイッチをオンにすると、クラウドの画面が開きます。「クラウドをつくる」をタップします。アプリはQRの四角、6桁の数字、32文字の文字列を表示します。これがあなたのクラウドの鍵です。クラウドは一人ひとり別です。</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/ja/01-cloud-off.png"><img src="/lambit2fa/cloud/img/ja/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>端末にすでにコードがある場合、すべてをクラウドに送るか、先にここだけに残すコードを選ぶかを尋ねられます。下の「クラウドに送らないコード」をご覧ください。</p>
+<h2>ステップ2. 2台目の端末をつなぐ</h2>
+<p>2台目の端末で設定の「クラウド」をオンにし、「四角を読み取る」をタップして、1台目の四角にカメラを向けます。2台目が6桁の数字を求めます。その数字はそのとき1台目の四角の下に表示されています（30秒ごとに変わります）。入力して「確認」をタップすると、コードが届きます。</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/ja/02-cloud-key.png"><img src="/lambit2fa/cloud/img/ja/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>あとはすべて自動です。新しいコード、変更、削除が何もしなくても他の端末に届きます。覚えたり書き留めたりするものはありません。四角と数字はいつでも再表示できます。「設定」→「マイクラウドの管理」→「四角と数字を出す」。</p>
+<h2>カメラがない場合</h2>
+<p>デスクトップパソコンにはカメラの代わりに「クラウドの鍵」の入力欄があります。32文字を手で入力し（4文字ずつ区切って表示されます）、「クラウドに入る」をタップします。その後は同じ6桁の数字です。これは一度だけです。</p>
+<h2>クラウドに送らないコード</h2>
+<p>どのコードも1台の端末だけに残せます。たとえば仕事のコードを自宅のパソコンに送らない、といった使い方です。コードを長押し →「クラウドに送らない」。そのコードには一覧で斜線付きの雲のアイコンが付きます。</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/ja/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/ja/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>新しいコードを追加するときは「クラウドに送る」の確認が必ずあり、初期設定は送るです。すでにクラウドにあるコードを外す場合、他の端末からも削除するか、そのまま残すかを尋ねられます。</p>
+<p>クラウドに送らないコードを守るのはバックアップファイルだけです。他の端末にはそのコードはありません。</p>
+<h2>それでもバックアップを</h2>
+<p>クラウドは保管庫ではありません。コードの入った端末が1台でも無事なら、クラウドは新しい端末にコードを運びます。1台も残らなければクラウドの鍵も失われ、コードはバックアップファイルからしか戻せません（「バックアップ」→「バックアップを作る」）。</p>
+<h2>クラウドから抜ける</h2>
+<p>「クラウド」画面に「クラウドから出る」があります。端末は鍵を忘れ、端末上のコードはそのまま残ります。自動で戻ることはありません。別の端末から鍵をもう一度見せてください。設定の「クラウド」スイッチは別物で、同期を一時停止するだけです。</p>
+<h2>クラウドの鍵を守る</h2>
+<p>鍵を持つ人が郵便受けにアクセスできます。他人に見せたり、鍵が表示された画面を撮影したりしないでください。スクリーンショットは他のアプリが読めるギャラリーに入ります。鍵をどこかに保管する必要はありません。あなたの端末にあります。</p>
+<p class="more"><a href="/lambit2fa/download/ja/">lambit2FA をダウンロード</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/ja/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

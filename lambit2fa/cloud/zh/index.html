@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何设置您的 lambit2FA 云端 — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/zh/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans" class="on">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>如何设置您的 lambit2FA 云端</h1>
+<p class="intro">云端在您的设备之间传递验证码：在手机上添加一个验证码，它会自动出现在电脑上。只需设置一次，几分钟即可。</p>
+<h2>什么是云端</h2>
+<p>它是我们服务器上、您的设备之间的一个信箱。一台设备放入新验证码，另一台取走。信箱不知道属于谁，也读不懂里面的内容：验证码在您的设备上用密钥封好，而密钥永远不会发送到服务器。</p>
+<p>不需要账户、邮箱和密码。可以不开启云端——应用没有云端也能完整使用。</p>
+<h2>第 1 步：在第一台设备上开启云端</h2>
+<p>打开「设置」，打开「云」开关——云端界面随即打开。点击「创建云端」。应用会显示一个二维码方块、一个六位数字和一串 32 个字符——这就是您云端的密钥。每个人都有自己的云端。</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/zh/01-cloud-off.png"><img src="/lambit2fa/cloud/img/zh/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>如果设备上已经有验证码，应用会询问：全部发送到云端，还是先选择哪些只留在本机。详见下文「不发送到云端的验证码」。</p>
+<h2>第 2 步：连接第二台设备</h2>
+<p>在第二台设备的设置中打开「云」，点击「扫描方块」，把相机对准第一台设备上的方块。第二台设备会要求输入六位数字——此时该数字显示在第一台设备的方块下方（每 30 秒更换一次）。输入后点击「确认」，验证码就会到达。</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/zh/02-cloud-key.png"><img src="/lambit2fa/cloud/img/zh/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>之后一切自动完成：新增、修改和删除的验证码无需任何操作就会到达您的其他设备。无需记忆或抄写：方块和数字随时可以再次显示——「设置」→「管理我的云端」→「显示方块和数字」。</p>
+<h2>如果没有相机</h2>
+<p>在台式电脑上，相机的位置是一个「云密钥」输入框：手动输入这 32 个字符（按每四个一组显示），然后点击「进入云」。接着输入同样的六位数字。只需做一次。</p>
+<h2>不发送到云端的验证码</h2>
+<p>任何验证码都可以只留在一台设备上——比如工作用的验证码不发送到家里的电脑。长按验证码 →「不发送到云端」。这样的验证码在列表中会显示一个划线的云朵图标。</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/zh/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/zh/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>添加新验证码时，总会询问「发送到云端」，默认为发送。如果验证码已在云端而您将它移出，应用会询问是否同时从其他设备删除，还是保留在那里。</p>
+<p>不在云端的验证码只能靠备份文件保护：其他设备上没有它们。</p>
+<h2>仍然要做备份</h2>
+<p>云端不是存储库。只要您至少有一台带有验证码的设备完好，云端就能把验证码带到新设备上。如果一台都不剩，云端密钥也就没有了，验证码只能从备份文件恢复（「备份」→「创建备份」）。</p>
+<h2>退出云端</h2>
+<p>「云」界面有「退出云端」：设备忘记密钥，设备上的验证码保持完好。它不会自动重新加入——请再次从其他设备向它出示密钥。设置中的「云」开关是另一回事：它只是暂停同步。</p>
+<h2>保管好云端密钥</h2>
+<p>谁拥有密钥，谁就能访问信箱。不要给外人看，也不要拍下显示密钥的屏幕：截图会进入相册，而其他应用可以读取相册。密钥不需要专门保存——它就在您的设备上。</p>
+<p class="more"><a href="/lambit2fa/download/zh/">下载 lambit2FA</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/zh/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

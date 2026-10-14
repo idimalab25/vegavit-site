@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Как настроить ваше облако lambit2FA — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/ru/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru" class="on">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>Как настроить ваше облако lambit2FA</h1>
+<p class="intro">Облако переносит коды между вашими устройствами: завели код на телефоне — он сам появится на компьютере. Настраивается один раз, за пару минут.</p>
+<h2>Что такое облако</h2>
+<p>Это почтовый ящик между вашими устройствами на нашем сервере. Одно устройство кладёт туда новый код, другое забирает. Ящик не знает, чей он, и не может прочитать, что внутри: коды запечатываются на вашем устройстве ключом, который на сервер не уходит никогда.</p>
+<p>Учётной записи, почты и пароля не нужно. Облако можно не включать — приложение полностью работает и без него.</p>
+<h2>Шаг 1. Включите облако на первом устройстве</h2>
+<p>Откройте «Настройки» и включите выключатель «Облако» — откроется экран облака. Нажмите «Создать облако». Приложение покажет квадрат-QR, шестизначное число и строку из 32 знаков — это ключ вашего облака. Облако у каждого своё.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/ru/01-cloud-off.png"><img src="/lambit2fa/cloud/img/ru/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>Если на устройстве есть коды, приложение спросит: отправить в облако все или сначала выбрать, какие останутся только здесь. Про это — ниже, «Коды, которые не уходят в облако».</p>
+<h2>Шаг 2. Подключите второе устройство</h2>
+<p>На втором устройстве включите «Облако» в настройках, нажмите «Сканировать квадрат» и наведите камеру на квадрат с первого. Второе устройство попросит шесть цифр — число в этот момент видно на первом, под квадратом (оно меняется каждые 30 секунд). Наберите его, нажмите «Подтвердить» — и коды приедут.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/ru/02-cloud-key.png"><img src="/lambit2fa/cloud/img/ru/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>Дальше всё само: новый код, правка и удаление доезжают до остальных устройств без единого действия. Запоминать и записывать ничего не нужно: квадрат и число можно показать снова в любой момент — «Настройки» → «Управление моим облаком» → «Показать квадрат и число».</p>
+<h2>Если камеры нет</h2>
+<p>На настольном компьютере вместо камеры есть поле «Ключ облака»: наберите 32 знака руками (показаны группами по четыре) и нажмите «Войти в облако». Дальше — те же шесть цифр. Это делается один раз.</p>
+<h2>Коды, которые не уходят в облако</h2>
+<p>Любой код можно оставить только на одном устройстве — например, рабочие коды не отправлять на домашний компьютер. Нажмите на код и подержите → «Не отправлять в облако». У такого кода в списке появляется значок зачёркнутого облака.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/ru/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/ru/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>При добавлении нового кода вопрос «Отправлять в облако» задаётся всегда; по умолчанию — отправлять. Если код уже был в облаке и вы убираете его, приложение спросит, удалить ли его с других устройств или оставить там.</p>
+<p>Коды «не в облако» защищает только файл копии: на других устройствах их нет.</p>
+<h2>Копию делайте всё равно</h2>
+<p>Облако — не хранилище. Пока цело хотя бы одно ваше устройство с кодами, облако вернёт их на новое. Не осталось ни одного — ключа облака тоже нет, и восстановить коды можно только из файла копии («Копии» → «Создать резервную копию»).</p>
+<h2>Выйти из облака</h2>
+<p>На экране «Облако» есть «Выйти из облака»: устройство забывает ключ, коды на нём остаются целыми. Обратно оно само не войдёт — покажите ему ключ с другого устройства ещё раз. Выключатель «Облако» в настройках — другое: он только ставит обмен на паузу.</p>
+<h2>Берегите ключ облака</h2>
+<p>У кого ключ — у того доступ к ящику. Не показывайте его посторонним и не фотографируйте экран с ним: снимок попадает в галерею, которую читают другие приложения. Хранить ключ специально не нужно — он есть на ваших устройствах.</p>
+<p class="more"><a href="/lambit2fa/download/ru/">Скачать lambit2FA</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/ru/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

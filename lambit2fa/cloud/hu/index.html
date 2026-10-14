@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Így állítsa be a lambit2FA-felhőjét — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/hu/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu" class="on">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>Így állítsa be a lambit2FA-felhőjét</h1>
+<p class="intro">A felhő a kódokat viszi az eszközei között: vegyen fel egy kódot a telefonon, és magától megjelenik a számítógépen. Egyszer kell beállítani, pár perc alatt.</p>
+<h2>Mi a felhő</h2>
+<p>Egy postaláda az eszközei között a mi szerverünkön. Az egyik eszköz beteszi az új kódot, a másik kiveszi. A láda nem tudja, kié, és nem tudja elolvasni, mi van benne: a kódokat az eszközén pecsételik le egy kulccsal, amely sosem kerül a szerverre.</p>
+<p>Nem kell fiók, e-mail vagy jelszó. A felhőt ki is hagyhatja — az alkalmazás nélküle is teljesen működik.</p>
+<h2>1. lépés. Kapcsolja be a felhőt az első eszközön</h2>
+<p>Nyissa meg a „Beállítások” lapot, és kapcsolja be a „Felhő” kapcsolót — megnyílik a felhő képernyője. Koppintson a „Felhő létrehozása” gombra. Az alkalmazás egy QR-négyzetet, egy hatjegyű számot és egy 32 karakteres sort mutat — ez a felhője kulcsa. Mindenkinek saját felhője van.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/hu/01-cloud-off.png"><img src="/lambit2fa/cloud/img/hu/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>Ha az eszközön már vannak kódok, az alkalmazás megkérdezi, hogy mindet a felhőbe küldje-e, vagy előbb kiválasztja, melyek maradnak csak itt. Erről lentebb: „Kódok, amelyek nem kerülnek a felhőbe”.</p>
+<h2>2. lépés. Kapcsolja be a második eszközt</h2>
+<p>A második eszközön kapcsolja be a „Felhő” kapcsolót a beállításokban, koppintson a „Négyzet beolvasása” gombra, és irányítsa a kamerát az első eszköz négyzetére. A második eszköz hat számjegyet kér — a szám ebben a pillanatban az első eszközön, a négyzet alatt látható (30 másodpercenként változik). Írja be, koppintson a „Megerősítés” gombra — és a kódok megérkeznek.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/hu/02-cloud-key.png"><img src="/lambit2fa/cloud/img/hu/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>Innentől minden magától megy: az új kód, a módosítás és a törlés egyetlen mozdulat nélkül eljut a többi eszközére. Nincs mit megjegyezni vagy leírni: a négyzet és a szám bármikor újra megjeleníthető — „Beállítások” → „Saját felhő kezelése” → „Négyzet és szám mutatása”.</p>
+<h2>Ha nincs kamera</h2>
+<p>Asztali számítógépen kamera helyett a „Felhőkulcs” mező van: írja be a 32 karaktert kézzel (négyes csoportokban jelennek meg), és koppintson a „Belépés a felhőbe” gombra. Utána ugyanaz a hat számjegy. Ezt egyszer kell megtenni.</p>
+<h2>Kódok, amelyek nem kerülnek a felhőbe</h2>
+<p>Bármelyik kód maradhat csak egy eszközön — például a munkahelyi kódok ne kerüljenek az otthoni számítógépre. Tartsa nyomva a kódot → „Ne küldje a felhőbe”. Az ilyen kód a listában áthúzott felhő ikont kap.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/hu/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/hu/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>Új kód felvételekor a „Küldés a felhőbe” kérdés mindig elhangzik; alapértelmezés a küldés. Ha a kód már a felhőben volt, és kiveszi onnan, az alkalmazás megkérdezi, törölje-e a többi eszközről, vagy hagyja ott.</p>
+<p>A felhőn kívüli kódokat csak a mentésfájl védi: a többi eszközén nem léteznek.</p>
+<h2>Mentést így is készítsen</h2>
+<p>A felhő nem tároló. Amíg legalább egy eszköze a kódokkal ép, a felhő átviszi őket egy újra. Ha egy sem maradt, a felhő kulcsa is elveszett, és a kódok csak mentésfájlból állíthatók vissza („Mentések” → „Biztonsági mentés készítése”).</p>
+<h2>Kilépés a felhőből</h2>
+<p>A „Felhő” képernyőn van „Kilépés a felhőből”: az eszköz elfelejti a kulcsot, a rajta lévő kódok épen maradnak. Magától nem lép vissza — mutassa meg neki újra a kulcsot egy másik eszközről. A beállítások „Felhő” kapcsolója más: az csak szünetelteti a cserét.</p>
+<h2>Óvja a felhő kulcsát</h2>
+<p>Akinél a kulcs van, annál a hozzáférés a ládához. Ne mutassa idegeneknek, és ne fényképezze le a képernyőt vele: a képernyőkép a galériába kerül, amelyet más alkalmazások olvasnak. A kulcsot nem kell sehol tárolni — ott van az eszközein.</p>
+<p class="more"><a href="/lambit2fa/download/hu/">lambit2FA letöltése</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/hu/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>

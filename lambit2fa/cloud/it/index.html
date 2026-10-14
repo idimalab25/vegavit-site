@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Come configurare la tua nuvola lambit2FA — VEGAVIT EOOD</title>
+<link rel="canonical" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="en" href="https://vegavit.eu/lambit2fa/cloud/">
+<link rel="alternate" hreflang="ru" href="https://vegavit.eu/lambit2fa/cloud/ru/">
+<link rel="alternate" hreflang="es" href="https://vegavit.eu/lambit2fa/cloud/es/">
+<link rel="alternate" hreflang="ar" href="https://vegavit.eu/lambit2fa/cloud/ar/">
+<link rel="alternate" hreflang="de" href="https://vegavit.eu/lambit2fa/cloud/de/">
+<link rel="alternate" hreflang="pt" href="https://vegavit.eu/lambit2fa/cloud/pt/">
+<link rel="alternate" hreflang="zh-Hans" href="https://vegavit.eu/lambit2fa/cloud/zh/">
+<link rel="alternate" hreflang="fi" href="https://vegavit.eu/lambit2fa/cloud/fi/">
+<link rel="alternate" hreflang="fr" href="https://vegavit.eu/lambit2fa/cloud/fr/">
+<link rel="alternate" hreflang="nl" href="https://vegavit.eu/lambit2fa/cloud/nl/">
+<link rel="alternate" hreflang="id" href="https://vegavit.eu/lambit2fa/cloud/id/">
+<link rel="alternate" hreflang="hi" href="https://vegavit.eu/lambit2fa/cloud/hi/">
+<link rel="alternate" hreflang="ja" href="https://vegavit.eu/lambit2fa/cloud/ja/">
+<link rel="alternate" hreflang="ko" href="https://vegavit.eu/lambit2fa/cloud/ko/">
+<link rel="alternate" hreflang="tr" href="https://vegavit.eu/lambit2fa/cloud/tr/">
+<link rel="alternate" hreflang="vi" href="https://vegavit.eu/lambit2fa/cloud/vi/">
+<link rel="alternate" hreflang="it" href="https://vegavit.eu/lambit2fa/cloud/it/">
+<link rel="alternate" hreflang="pl" href="https://vegavit.eu/lambit2fa/cloud/pl/">
+<link rel="alternate" hreflang="ro" href="https://vegavit.eu/lambit2fa/cloud/ro/">
+<link rel="alternate" hreflang="el" href="https://vegavit.eu/lambit2fa/cloud/el/">
+<link rel="alternate" hreflang="hu" href="https://vegavit.eu/lambit2fa/cloud/hu/">
+<link rel="alternate" hreflang="bg" href="https://vegavit.eu/lambit2fa/cloud/bg/">
+<link rel="alternate" hreflang="x-default" href="https://vegavit.eu/lambit2fa/cloud/">
+<meta name="color-scheme" content="light dark">
+<style>*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#f4f6f9;--panel:#fff;--ink:#14181f;--dim:#5c6675;--accent:#1a5fd0;--accent-sub:#e8f0fe;--line:#e0e5ee;--shadow:0 1px 2px rgba(20,24,31,.05),0 3px 12px rgba(20,24,31,.07)}
+@media (prefers-color-scheme:dark){:root{--bg:#10141b;--panel:#1a2029;--ink:#e8ecf2;--dim:#93a0b4;--accent:#6ea8ff;--accent-sub:#1f2c42;--line:#28303d;--shadow:0 1px 2px rgba(0,0,0,.35),0 3px 12px rgba(0,0,0,.35)}}
+body{font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+:lang(zh){font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans CJK SC",sans-serif}
+:lang(ja){font-family:"Hiragino Sans","Yu Gothic","Meiryo","Noto Sans CJK JP",sans-serif}
+:lang(ko){font-family:"Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif}
+:lang(hi){font-family:"Kohinoor Devanagari","Nirmala UI","Noto Sans Devanagari",sans-serif}
+:lang(ar){font-family:"SF Arabic","Geeza Pro","Tahoma","Noto Sans Arabic",sans-serif}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:780px;margin:0 auto;padding:0 20px}
+.site-head{background:var(--panel);border-bottom:1px solid var(--line)}
+.head-in{display:flex;align-items:center;gap:12px 16px;padding:14px 0;flex-wrap:wrap}
+.logo{font-size:20px;font-weight:700;letter-spacing:.5px;color:var(--ink)}
+.logo span{color:var(--accent)}
+.head-sp{flex:1}
+.langs{display:flex;gap:4px;flex-wrap:wrap;max-width:560px;justify-content:flex-end}
+.langs a{border:1px solid var(--line);border-radius:14px;padding:3px 9px;font-size:12px;color:var(--dim)}
+.langs a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.langs a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+main{padding:34px 0 60px}
+article{background:var(--panel);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:28px 30px}
+h1{font-size:28px;line-height:1.25;margin-bottom:14px}
+h2{font-size:19px;margin:28px 0 10px}
+p{margin:0 0 12px;font-size:16px}
+p.intro{font-size:17px;color:var(--dim)}
+figure.shot{margin:18px auto 22px;text-align:center}
+figure.shot a{display:inline-block}
+figure.shot img{display:block;width:300px;max-width:100%;height:auto;border-radius:16px;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
+.more{margin-top:30px;padding-top:18px;border-top:1px solid var(--line)}
+.more a{display:inline-block;background:var(--accent);color:#fff;border-radius:9px;padding:9px 16px;font-size:14px}
+.more a:hover{text-decoration:none;opacity:.9}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color:var(--dim)}
+@media(max-width:560px){h1{font-size:23px}article{padding:20px 18px}figure.shot img{width:100%}}</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-in">
+    <a class="logo" href="/it/" dir="ltr">VEGAVIT<span>.</span></a>
+    <div class="head-sp"></div>
+    <div class="langs"><a href="/lambit2fa/cloud/" lang="en">English</a><a href="/lambit2fa/cloud/ru/" lang="ru">Русский</a><a href="/lambit2fa/cloud/es/" lang="es">Español</a><a href="/lambit2fa/cloud/ar/" lang="ar">العربية</a><a href="/lambit2fa/cloud/de/" lang="de">Deutsch</a><a href="/lambit2fa/cloud/pt/" lang="pt">Português</a><a href="/lambit2fa/cloud/zh/" lang="zh-Hans">简体中文</a><a href="/lambit2fa/cloud/fi/" lang="fi">Suomi</a><a href="/lambit2fa/cloud/fr/" lang="fr">Français</a><a href="/lambit2fa/cloud/nl/" lang="nl">Nederlands</a><a href="/lambit2fa/cloud/id/" lang="id">Bahasa Indonesia</a><a href="/lambit2fa/cloud/hi/" lang="hi">हिन्दी</a><a href="/lambit2fa/cloud/ja/" lang="ja">日本語</a><a href="/lambit2fa/cloud/ko/" lang="ko">한국어</a><a href="/lambit2fa/cloud/tr/" lang="tr">Türkçe</a><a href="/lambit2fa/cloud/vi/" lang="vi">Tiếng Việt</a><a href="/lambit2fa/cloud/it/" lang="it" class="on">Italiano</a><a href="/lambit2fa/cloud/pl/" lang="pl">Polski</a><a href="/lambit2fa/cloud/ro/" lang="ro">Română</a><a href="/lambit2fa/cloud/el/" lang="el">Ελληνικά</a><a href="/lambit2fa/cloud/hu/" lang="hu">Magyar</a><a href="/lambit2fa/cloud/bg/" lang="bg">Български</a></div>
+  </div>
+</header>
+
+<main class="wrap">
+<article>
+<h1>Come configurare la tua nuvola lambit2FA</h1>
+<p class="intro">La nuvola porta i codici tra i tuoi dispositivi: aggiungi un codice sul telefono e compare da solo sul computer. Si configura una volta, in un paio di minuti.</p>
+<h2>Che cos’è la nuvola</h2>
+<p>È una cassetta delle lettere tra i tuoi dispositivi sul nostro server. Un dispositivo ci mette un codice nuovo, un altro lo prende. La cassetta non sa di chi è e non può leggere cosa c’è dentro: i codici vengono sigillati sul tuo dispositivo con una chiave che non va mai al server.</p>
+<p>Non servono account, email o password. Puoi non attivare la nuvola: l’app funziona completamente anche senza.</p>
+<h2>Passo 1. Attiva la nuvola sul primo dispositivo</h2>
+<p>Apri «Impostazioni» e attiva l’interruttore «Nuvola»: si apre la schermata della nuvola. Tocca «Crea una nuvola». L’app mostra un quadrato QR, un numero di sei cifre e una stringa di 32 caratteri: è la chiave della tua nuvola. Ognuno ha la propria nuvola.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/it/01-cloud-off.png"><img src="/lambit2fa/cloud/img/it/01-cloud-off.png" alt="" width="300" height="652"></a></figure>
+<p>Se sul dispositivo ci sono già codici, l’app chiede se inviarli tutti alla nuvola o scegliere prima quali restano solo qui. Vedi sotto «Codici che non vanno nella nuvola».</p>
+<h2>Passo 2. Collega il secondo dispositivo</h2>
+<p>Sul secondo dispositivo attiva «Nuvola» nelle impostazioni, tocca «Scansiona il quadrato» e punta la fotocamera sul quadrato del primo. Il secondo dispositivo chiede sei cifre: in quel momento il numero è visibile sul primo, sotto il quadrato (cambia ogni 30 secondi). Inseriscilo, tocca «Conferma» e i codici arrivano.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/it/02-cloud-key.png"><img src="/lambit2fa/cloud/img/it/02-cloud-key.png" alt="" width="300" height="652"></a></figure>
+<p>Da lì in poi è tutto automatico: un codice nuovo, una modifica e una cancellazione raggiungono gli altri dispositivi senza una sola azione. Niente da ricordare o annotare: quadrato e numero si possono mostrare di nuovo in qualsiasi momento — «Impostazioni» → «Gestisci la mia nuvola» → «Mostra il quadrato e il numero».</p>
+<h2>Se non c’è la fotocamera</h2>
+<p>Su un computer fisso al posto della fotocamera c’è il campo «Chiave della nuvola»: digita i 32 caratteri a mano (sono mostrati a gruppi di quattro) e tocca «Entra nella nuvola». Poi le stesse sei cifre. Si fa una volta sola.</p>
+<h2>Codici che non vanno nella nuvola</h2>
+<p>Qualsiasi codice può restare su un solo dispositivo — per esempio, non inviare i codici di lavoro al computer di casa. Tieni premuto il codice → «Non inviare alla nuvola». Quel codice riceve nell’elenco un’icona di nuvola barrata.</p>
+<figure class="shot"><a href="/lambit2fa/cloud/img/it/03-not-in-cloud.png"><img src="/lambit2fa/cloud/img/it/03-not-in-cloud.png" alt="" width="300" height="652"></a></figure>
+<p>Quando aggiungi un codice nuovo, la domanda «Invia alla nuvola» viene fatta sempre; per impostazione predefinita si invia. Se un codice era già nella nuvola e lo togli, l’app chiede se eliminarlo dagli altri dispositivi o lasciarlo lì.</p>
+<p>I codici fuori dalla nuvola sono protetti solo da un file di copia: sugli altri dispositivi non esistono.</p>
+<h2>Fai comunque una copia</h2>
+<p>La nuvola non è un deposito. Finché almeno uno dei tuoi dispositivi con i codici è integro, la nuvola li porta su uno nuovo. Se non ne resta nessuno, non c’è più nemmeno la chiave della nuvola, e i codici si recuperano solo da un file di copia («Copie» → «Crea una copia di sicurezza»).</p>
+<h2>Uscire dalla nuvola</h2>
+<p>Nella schermata «Nuvola» c’è «Esci dalla nuvola»: il dispositivo dimentica la chiave, i codici su di esso restano integri. Non rientrerà da solo: mostragli di nuovo la chiave da un altro dispositivo. L’interruttore «Nuvola» nelle impostazioni è un’altra cosa: mette solo in pausa lo scambio.</p>
+<h2>Proteggi la chiave della nuvola</h2>
+<p>Chi ha la chiave ha accesso alla cassetta. Non mostrarla a estranei e non fotografare lo schermo con la chiave: lo screenshot finisce nella galleria, che altre app possono leggere. Non serve conservare la chiave da nessuna parte: è sui tuoi dispositivi.</p>
+<p class="more"><a href="/lambit2fa/download/it/">Scarica lambit2FA</a></p>
+</article>
+</main>
+
+<footer>
+  <div class="wrap">© 2026 VEGAVIT EOOD · <a href="/it/">vegavit.eu</a></div>
+</footer>
+
+</body>
+</html>
