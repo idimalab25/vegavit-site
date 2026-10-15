@@ -29,5 +29,6 @@
   "gh_release": "Julkaisu GitHubissa",
   "sha_file": "tarkistussumma",
   "apk_dl": "Lataa APK",
-  "apk_note": "asennus Google Playn ulkopuolelta"
+  "apk_note": "asennus Google Playn ulkopuolelta",
+  "win_note": "Allekirjoitusta ei ole: ensimmäisellä käynnistyksellä Windows näyttää ”Tuntematon julkaisija” → ”Lisätietoja” → ”Suorita joka tapauksessa”."
 }

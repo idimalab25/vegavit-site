@@ -29,5 +29,6 @@
   "gh_release": "Bản phát hành trên GitHub",
   "sha_file": "mã kiểm tra",
   "apk_dl": "Tải APK",
-  "apk_note": "cài đặt không qua Google Play"
+  "apk_note": "cài đặt không qua Google Play",
+  "win_note": "Không có chữ ký: lần chạy đầu tiên Windows hiển thị “Nhà phát hành không xác định” → “Thông tin thêm” → “Vẫn chạy”."
 }

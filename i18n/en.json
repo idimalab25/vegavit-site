@@ -38,5 +38,6 @@
   "gh_release": "Release on GitHub",
   "sha_file": "checksum",
   "apk_dl": "Download APK",
-  "apk_note": "installation outside Google Play"
+  "apk_note": "installation outside Google Play",
+  "win_note": "There is no signature: on first run Windows shows \"Unknown publisher\" → \"More info\" → \"Run anyway\"."
 }

@@ -29,5 +29,6 @@
   "gh_release": "GitHub のリリース",
   "sha_file": "チェックサム",
   "apk_dl": "APK をダウンロード",
-  "apk_note": "Google Play を使わないインストール"
+  "apk_note": "Google Play を使わないインストール",
+  "win_note": "署名はありません。初回起動時に Windows が「不明な発行元」と表示します →「詳細情報」→「実行」。"
 }

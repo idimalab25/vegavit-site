@@ -29,5 +29,6 @@
   "gh_release": "GitHub 上的发行版",
   "sha_file": "校验和",
   "apk_dl": "下载 APK",
-  "apk_note": "不经 Google Play 安装"
+  "apk_note": "不经 Google Play 安装",
+  "win_note": "没有数字签名：首次运行时 Windows 会显示“未知发布者”→“更多信息”→“仍要运行”。"
 }

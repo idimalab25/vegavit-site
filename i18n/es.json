@@ -29,5 +29,6 @@
   "gh_release": "Versión en GitHub",
   "sha_file": "suma de comprobación",
   "apk_dl": "Descargar APK",
-  "apk_note": "instalación fuera de Google Play"
+  "apk_note": "instalación fuera de Google Play",
+  "win_note": "No hay firma: en el primer inicio Windows mostrará «Editor desconocido» → «Más información» → «Ejecutar de todas formas»."
 }

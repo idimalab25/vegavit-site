@@ -29,5 +29,6 @@
   "gh_release": "Release auf GitHub",
   "sha_file": "Prüfsumme",
   "apk_dl": "APK herunterladen",
-  "apk_note": "Installation außerhalb von Google Play"
+  "apk_note": "Installation außerhalb von Google Play",
+  "win_note": "Es gibt keine Signatur: beim ersten Start zeigt Windows „Unbekannter Herausgeber“ → „Weitere Informationen“ → „Trotzdem ausführen“."
 }

@@ -29,5 +29,6 @@
   "gh_release": "Versão no GitHub",
   "sha_file": "soma de verificação",
   "apk_dl": "Baixar APK",
-  "apk_note": "instalação fora do Google Play"
+  "apk_note": "instalação fora do Google Play",
+  "win_note": "Não há assinatura: na primeira execução o Windows mostra «Editor desconhecido» → «Mais informações» → «Executar mesmo assim»."
 }

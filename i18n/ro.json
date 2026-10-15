@@ -29,5 +29,6 @@
   "gh_release": "Versiunea pe GitHub",
   "sha_file": "sumă de control",
   "apk_dl": "Descarcă APK",
-  "apk_note": "instalare în afara Google Play"
+  "apk_note": "instalare în afara Google Play",
+  "win_note": "Nu există semnătură: la prima pornire Windows afișează „Editor necunoscut” → „Mai multe informații” → „Executare oricum”."
 }

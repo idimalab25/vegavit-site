@@ -29,5 +29,6 @@
   "gh_release": "Release op GitHub",
   "sha_file": "controlesom",
   "apk_dl": "APK downloaden",
-  "apk_note": "installatie buiten Google Play om"
+  "apk_note": "installatie buiten Google Play om",
+  "win_note": "Er is geen handtekening: bij de eerste start toont Windows “Onbekende uitgever” → “Meer informatie” → “Toch uitvoeren”."
 }

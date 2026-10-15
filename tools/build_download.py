@@ -182,6 +182,7 @@ def page(code, t, linux_text, have, priv_label, site_t, shots):
       <a class="store" href="{STORE_MS}">Microsoft Store</a>
       {('<p class="note">' + esc(t['p_winzip']) + '</p>') if have.get('win') else ''}
       {win}
+      {('<p class="note">' + esc(site_t['win_note']) + '</p>') if have.get('win') else ''}
     </div>
   </div>
 </section>""")

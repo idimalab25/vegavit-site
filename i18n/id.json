@@ -29,5 +29,6 @@
   "gh_release": "Rilis di GitHub",
   "sha_file": "checksum",
   "apk_dl": "Unduh APK",
-  "apk_note": "pemasangan di luar Google Play"
+  "apk_note": "pemasangan di luar Google Play",
+  "win_note": "Tidak ada tanda tangan: saat pertama dijalankan Windows menampilkan “Penerbit tidak dikenal” → “Info selengkapnya” → “Tetap jalankan”."
 }

@@ -29,5 +29,6 @@
   "gh_release": "Kiadás a GitHubon",
   "sha_file": "ellenőrzőösszeg",
   "apk_dl": "APK letöltése",
-  "apk_note": "telepítés a Google Play megkerülésével"
+  "apk_note": "telepítés a Google Play megkerülésével",
+  "win_note": "Nincs aláírás: első indításkor a Windows „Ismeretlen közzétevő” üzenetet mutat → „További információ” → „Futtatás mindenképp”."
 }

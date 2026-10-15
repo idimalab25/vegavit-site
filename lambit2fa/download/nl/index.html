@@ -136,11 +136,12 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color
   <h2>Windows — Microsoft Store</h2>
   <div class="row">
     <div class="qr"><img src="/lambit2fa/download/qr/windows-store.svg" alt="Windows — Microsoft Store" width="124" height="124"><span>Windows — Microsoft Store</span></div>
-    
+    <div class="qr"><img src="/lambit2fa/download/qr/windows-zip.svg" alt="Windows — ZIP-archief van deze site (x64, ARM64)" width="124" height="124"><span>Windows — ZIP-archief van deze site (x64, ARM64)</span></div>
     <div class="col">
       <a class="store" href="https://apps.microsoft.com/detail/9PK7LTD3L3NJ">Microsoft Store</a>
-      
-      
+      <p class="note">Windows — ZIP-archief van deze site (x64, ARM64)</p>
+      <p class="note">Naast elk bestand staat een SHA-256 ter controle</p><ul class="files"><li><a href="/lambit2fa/download/files/lambit2FA-1.2-windows-arm64.zip">lambit2FA-1.2-windows-arm64.zip</a> · <a href="/lambit2fa/download/files/lambit2FA-1.2-windows-arm64.zip.sha256">controlesom .sha256</a> <span class="sha">SHA-256: 8fc1daea2a2b349c0c929d41df8f00b6ebc48307a90dcbb6536519dc8305db53</span></li><li><a href="/lambit2fa/download/files/lambit2FA-1.2-windows-x64.zip">lambit2FA-1.2-windows-x64.zip</a> · <a href="/lambit2fa/download/files/lambit2FA-1.2-windows-x64.zip.sha256">controlesom .sha256</a> <span class="sha">SHA-256: 56edf0a3591b1ff765b01cf2e6e443206bba3ae6fa521466667697af5b2e03a7</span></li></ul>
+      <p class="note">Er is geen handtekening: bij de eerste start toont Windows “Onbekende uitgever” → “Meer informatie” → “Toch uitvoeren”.</p>
     </div>
   </div>
 </section>
@@ -149,23 +150,23 @@ footer{border-top:1px solid var(--line);padding:22px 0 40px;font-size:13px;color
   <div class="row">
     <div class="qr"><img src="/lambit2fa/download/qr/linux.svg" alt="Linux — AppImage (x86_64, ARM64)" width="124" height="124"><span>Linux — AppImage (x86_64, ARM64)</span></div>
     <div class="col">
-      <p class="note">Naast elk bestand staat een SHA-256 ter controle</p><ul class="files"><li><a href="/lambit2fa/download/files/lambit2FA-1.1-linux-aarch64.AppImage">lambit2FA-1.1-linux-aarch64.AppImage</a> · <a href="/lambit2fa/download/files/lambit2FA-1.1-linux-aarch64.AppImage.sha256">controlesom .sha256</a> <span class="sha">SHA-256: d97fab86f6f6904dad798f2fcda40e7921978d4a3fc5f94ffc75072f4c279c56</span></li><li><a href="/lambit2fa/download/files/lambit2FA-1.1-linux-x86_64.AppImage">lambit2FA-1.1-linux-x86_64.AppImage</a> · <a href="/lambit2fa/download/files/lambit2FA-1.1-linux-x86_64.AppImage.sha256">controlesom .sha256</a> <span class="sha">SHA-256: c982bbe2ab85bf8af552288a63b1adb8bcf5fb2a0e8bc75d0c6dfbb5195dcf6f</span></li></ul>
+      <p class="note">Naast elk bestand staat een SHA-256 ter controle</p><ul class="files"><li><a href="/lambit2fa/download/files/lambit2FA-1.2-linux-aarch64.AppImage">lambit2FA-1.2-linux-aarch64.AppImage</a> · <a href="/lambit2fa/download/files/lambit2FA-1.2-linux-aarch64.AppImage.sha256">controlesom .sha256</a> <span class="sha">SHA-256: 7d259312f98f58cdcb66328492c32d7296a423ec44a88f0df4832bbe8421a23b</span></li><li><a href="/lambit2fa/download/files/lambit2FA-1.2-linux-x86_64.AppImage">lambit2FA-1.2-linux-x86_64.AppImage</a> · <a href="/lambit2fa/download/files/lambit2FA-1.2-linux-x86_64.AppImage.sha256">controlesom .sha256</a> <span class="sha">SHA-256: 863a4512970264163705d35048ec9b4becf7ac807666b6b5874dca8df7187198</span></li></ul>
       <p class="note"><a href="https://github.com/idimalab25/lambit2FA-releases/releases/tag/linux-1.1">Release op GitHub</a></p>
     </div>
   </div>
-  <pre class="plain">lambit2FA voor Linux — versie 1.1
+  <pre class="plain">lambit2FA voor Linux — versie 1.2
 
 Codes voor tweestapsaanmelding op uw computer. Geen account en geen internet nodig. De codes worden versleuteld bewaard; de sleutel staat in de sleutelbos van het systeem (GNOME Keyring of KWallet) of, waar die ontbreekt, in een bestand dat aan deze computer en uw gebruiker is gekoppeld.
 
 Voor gewone computers (Intel of AMD, x86_64):
-  lambit2FA-1.1-linux-x86_64.AppImage (38 MB)
-  SHA-256: c982bbe2ab85bf8af552288a63b1adb8bcf5fb2a0e8bc75d0c6dfbb5195dcf6f
+  lambit2FA-1.2-linux-x86_64.AppImage (38 MB)
+  SHA-256: 863a4512970264163705d35048ec9b4becf7ac807666b6b5874dca8df7187198
 
 Voor ARM-computers (Raspberry Pi 4/5, virtuele machines op Apple Silicon, aarch64):
-  lambit2FA-1.1-linux-aarch64.AppImage (36 MB)
-  SHA-256: d97fab86f6f6904dad798f2fcda40e7921978d4a3fc5f94ffc75072f4c279c56
+  lambit2FA-1.2-linux-aarch64.AppImage (36 MB)
+  SHA-256: 7d259312f98f58cdcb66328492c32d7296a423ec44a88f0df4832bbe8421a23b
 
-Zo start u: 1. Download het bestand. 2. Sta uitvoeren toe: rechtsklik → Eigenschappen → “Uitvoeren van bestand als programma toestaan”, of in een terminal: chmod +x lambit2FA-1.1-linux-x86_64.AppImage. 3. Open het. Er wordt niets geïnstalleerd — de app is één bestand. Verwijderen: wis het bestand; uw codes blijven in ~/.config/lambit2FA.
+Zo start u: 1. Download het bestand. 2. Sta uitvoeren toe: rechtsklik → Eigenschappen → “Uitvoeren van bestand als programma toestaan”, of in een terminal: chmod +x lambit2FA-1.2-linux-x86_64.AppImage. 3. Open het. Er wordt niets geïnstalleerd — de app is één bestand. Verwijderen: wis het bestand; uw codes blijven in ~/.config/lambit2FA.
 
 Werkt op Ubuntu 22.04 en nieuwer, Debian 12 en nieuwer, Linux Mint 21 en nieuwer, Pop!_OS 22.04 en nieuwer, Fedora 38 en nieuwer. Andere distributies zijn niet getest. Opent het bestand niet, installeer dan libfuse2: sudo apt install libfuse2 (op Ubuntu 24.04: libfuse2t64).
 
@@ -173,7 +174,7 @@ Bij de eerste start kan het systeem om het wachtwoord van de sleutelbos “login
 
 Een QR-code van het scherm lezen vereist op Wayland een schermafbeeldingsprogramma (gnome-screenshot, spectacle of grim). Zonder dat maakt u zelf een schermafbeelding en opent u die in de app als afbeelding.
 
-Download controleren: sha256sum lambit2FA-1.1-linux-x86_64.AppImage — de uitkomst moet overeenkomen met het .sha256-bestand ernaast.</pre>
+Download controleren: sha256sum lambit2FA-1.2-linux-x86_64.AppImage — de uitkomst moet overeenkomen met het .sha256-bestand ernaast.</pre>
 </section>
 
 <section class="plat" id="shots">

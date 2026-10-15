@@ -29,5 +29,6 @@
   "gh_release": "GitHub’daki sürüm",
   "sha_file": "sağlama toplamı",
   "apk_dl": "APK indir",
-  "apk_note": "Google Play dışından kurulum"
+  "apk_note": "Google Play dışından kurulum",
+  "win_note": "İmza yok: ilk çalıştırmada Windows “Bilinmeyen yayımcı” gösterir → “Ek bilgi” → “Yine de çalıştır”."
 }

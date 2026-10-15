@@ -29,5 +29,6 @@
   "gh_release": "Wydanie na GitHubie",
   "sha_file": "suma kontrolna",
   "apk_dl": "Pobierz APK",
-  "apk_note": "instalacja poza Google Play"
+  "apk_note": "instalacja poza Google Play",
+  "win_note": "Nie ma podpisu: przy pierwszym uruchomieniu Windows pokaże „Nieznany wydawca” → „Więcej informacji” → „Uruchom mimo to”."
 }
