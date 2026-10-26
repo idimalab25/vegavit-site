@@ -130,15 +130,18 @@
     .facts dd { margin-bottom: 10px; }
   }
 
-  /* плашка lambit2FA со скачиванием */
-  .card#lambit2fa { grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
-  .card#lambit2fa .plaque-main { flex: 1 1 320px; min-width: 260px; color: inherit; text-decoration: none; display: block; }
-  .card#lambit2fa .plaque-main:hover { text-decoration: none; }
-  .card#lambit2fa .plaque-main:hover h3 { color: var(--accent); }
-  .card#lambit2fa .dl-btn {
+  /* плашки программ со скачиванием: lambit2FA и WakeOnStop */
+  .card.plaque { grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .card.plaque .plaque-main { flex: 1 1 320px; min-width: 260px; color: inherit; text-decoration: none; display: block; }
+  .card.plaque .plaque-main:hover { text-decoration: none; }
+  .card.plaque .plaque-main:hover h3 { color: var(--accent); }
+  .card.plaque .dl-btn {
     display: inline-block; margin-top: 12px; background: var(--accent); color: #fff;
     border-radius: 9px; padding: 9px 18px; font-size: 14px; font-weight: 600;
   }
+  .plaque-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .plaque-head img { width: 64px; height: 64px; border-radius: 14px; flex: 0 0 auto; }
+  .plaque-head h3 { margin: 0; }
   .qrs { display: flex; gap: 12px; flex-wrap: wrap; }
   .qr { width: 104px; text-align: center; font-size: 11.5px; color: var(--text-soft); line-height: 1.3; }
   .qr img { display: block; width: 104px; height: 104px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 5px; }
@@ -204,7 +207,7 @@
     <div class="cards">
 
       <!-- lambit2FA: плашка со скачиванием, собирает tools/build_site.py -->
-      <div class="card" id="lambit2fa">
+      <div class="card plaque" id="lambit2fa">
         <a class="plaque-main" href="/lambit2fa/download/hi/">
           <h3>lambit2FA — दो-चरणीय लॉगइन कोड</h3>
           <p>सभी प्लेटफ़ॉर्म पर उपलब्ध: iPhone, iPad, Apple Watch, Mac, Android, Wear OS घड़ियाँ, Windows, Linux। आपके कोड आपके पास रहते हैं।</p>
@@ -220,6 +223,22 @@
         <div class="scan-hint">फ़ोन का कैमरा QR कोड पर रखें</div>
         <div class="plaque-shots"><img src="/lambit2fa/download/shots/hi/01-codes.jpg" alt=""><img src="/lambit2fa/download/shots/hi/02-groups.jpg" alt=""><img src="/lambit2fa/download/shots/hi/03-backups.jpg" alt=""><img src="/lambit2fa/download/shots/hi/04-settings.jpg" alt=""><img src="/lambit2fa/download/shots/hi/05-import.jpg" alt=""><img src="/lambit2fa/download/shots/hi/06-export.jpg" alt=""></div>
         <a class="priv" href="/lambit2fa/privacy/hi/">गोपनीयता नीति</a>
+      </div>
+
+      <!-- WakeOnStop: вторая программа, плашка того же устройства -->
+      <div class="card plaque" id="wakeonstop">
+        <a class="plaque-main" href="/wakeonstop/download/hi/">
+          <div class="plaque-head">
+            <img src="/wakeonstop/icon/wakeonstop-180.png" srcset="/wakeonstop/icon/wakeonstop-512.png 2x" alt="" width="64" height="64">
+            <h3>WakeOnStop — अपना स्टॉप कभी न चूकें</h3>
+          </div>
+          <p>आपके स्टेशन से कुछ मिनट पहले आपको सचेत करता है — ट्रेन, बस और ट्राम में। iPhone, Apple Watch, Android, Wear OS घड़ियाँ। बिना इंटरनेट काम करता है, आपकी लोकेशन फ़ोन पर ही रहती है।</p>
+          <span class="dl-btn">डाउनलोड करें</span>
+        </a>
+        <div class="qrs"><div class="qr"><img src="/wakeonstop/download/qr/iphone-app-store.svg" alt="iPhone और Apple Watch — App Store" width="104" height="104"><span>iPhone और Apple Watch — App Store</span></div><div class="qr"><img src="/wakeonstop/download/qr/android-google-play.svg" alt="Android और Wear OS घड़ियाँ — Google Play" width="104" height="104"><span>Android और Wear OS घड़ियाँ — Google Play</span></div></div>
+        <div class="scan-hint">QR कोड पर अपने फ़ोन का कैमरा रखें</div>
+        <div class="plaque-shots"><img src="/wakeonstop/download/shots/hi/1-trip.jpg" alt=""><img src="/wakeonstop/download/shots/hi/2-search.jpg" alt=""><img src="/wakeonstop/download/shots/hi/3-big.jpg" alt=""></div>
+        <a class="priv" href="/wakeonstop/privacy/en/">गोपनीयता नीति</a>
       </div>
 
       <div class="card">

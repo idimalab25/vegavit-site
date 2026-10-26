@@ -12,7 +12,11 @@
 (английская — та, что вписана в кабинет Apple, не трогается; остальные
 собирает tools/build_privacy.py из переводов i18n/privacy/).
 
-Запуск: python3 tools/build_site.py --src ~/lambit2FAlinux/AEFauthentic/store
+Вторая программа — WakeOnStop (с 26.10.2026): надписи, QR, иконка и
+картинки — из docs/сайт/ репозитория lambitTrainExit (--wos), политика на
+трёх языках в /wakeonstop/privacy/.
+
+Запуск: python3 tools/build_site.py --src ~/lambit2FAlinux/AEFauthentic/store --wos ~/lambitTrainExit/docs/сайт
 """
 import argparse
 import html
@@ -37,6 +41,8 @@ QRS = [('iphone-app-store', 'p_iphone'), ('mac-app-store', 'p_mac'),
 # QR на APK показывается только когда сам файл APK лежит в store/build/site:
 # пока его нет, Android — только через Google Play (хозяин, 10.10.2026).
 QR_APK = ('android-apk', 'p_apk')
+# WakeOnStop: два магазина, файлов с сайта нет (ТЗ_сайт_WakeOnStop.md).
+WOS_QRS = [('iphone-app-store', 'p_iphone'), ('android-google-play', 'p_android')]
 # Проекты: адреса не переводятся, тексты — ключами из i18n.
 # Ключи, которые обязан дать перевод сайта. Надписи плашки и подписи QR
 # сюда не входят: они приходят из site_strings.json проекта приложения.
@@ -66,7 +72,12 @@ def privacy_for(code):
     return '/lambit2fa/privacy/' if code == 'ru' else f'/lambit2fa/privacy/{code}/'
 
 
-def page(code, t, s, css, shots):
+def wos_privacy_for(code):
+    # политика WakeOnStop есть на трёх языках: ru → корень, bg → /bg/, остальные → английская
+    return {'ru': '/wakeonstop/privacy/', 'bg': '/wakeonstop/privacy/bg/'}.get(code, '/wakeonstop/privacy/en/')
+
+
+def page(code, t, s, css, shots, w, wshots):
     tag = TAG.get(code, code)
     dir_attr = ' dir="rtl"' if code in RTL else ''
     alts = '\n'.join(f'<link rel="alternate" hreflang="{TAG.get(c, c)}" href="https://vegavit.eu{url_for(c)}">'
@@ -82,6 +93,11 @@ def page(code, t, s, css, shots):
         f'<div class="qr"><img src="/lambit2fa/download/qr/{name}.svg" alt="{esc(s[key])}" '
         f'width="104" height="104"><span>{esc(s[key])}</span></div>'
         for name, key in QRS)
+
+    wqrs = ''.join(
+        f'<div class="qr"><img src="/wakeonstop/download/qr/{name}.svg" alt="{esc(w[key])}" '
+        f'width="104" height="104"><span>{esc(w[key])}</span></div>'
+        for name, key in WOS_QRS)
 
     cards = []
     for title, href, dom, textkey, platkey in PROJECTS:
@@ -135,7 +151,7 @@ def page(code, t, s, css, shots):
     <div class="cards">
 
       <!-- lambit2FA: плашка со скачиванием, собирает tools/build_site.py -->
-      <div class="card" id="lambit2fa">
+      <div class="card plaque" id="lambit2fa">
         <a class="plaque-main" href="/lambit2fa/download/{'' if code == DEFAULT_LANG else code + '/'}">
           <h3>{esc(s['plaque_title'])}</h3>
           <p>{esc(s['plaque_text'])}</p>
@@ -151,6 +167,22 @@ def page(code, t, s, css, shots):
         <div class="scan-hint">{esc(s['scan_hint'])}</div>
         <div class="plaque-shots">{''.join(f'<img src="/lambit2fa/download/shots/{shots[0]}/{n}" alt="">' for n in shots[1])}</div>
         <a class="priv" href="{privacy_for(code)}">{esc(t['privLink'])}</a>
+      </div>
+
+      <!-- WakeOnStop: вторая программа, плашка того же устройства -->
+      <div class="card plaque" id="wakeonstop">
+        <a class="plaque-main" href="/wakeonstop/download/{'' if code == DEFAULT_LANG else code + '/'}">
+          <div class="plaque-head">
+            <img src="/wakeonstop/icon/wakeonstop-180.png" srcset="/wakeonstop/icon/wakeonstop-512.png 2x" alt="" width="64" height="64">
+            <h3>{esc(w['plaque_title'])}</h3>
+          </div>
+          <p>{esc(w['plaque_text'])}</p>
+          <span class="dl-btn">{esc(w['plaque_button'])}</span>
+        </a>
+        <div class="qrs">{wqrs}</div>
+        <div class="scan-hint">{esc(w['scan_hint'])}</div>
+        <div class="plaque-shots">{''.join(f'<img src="/wakeonstop/download/shots/{wshots[0]}/{n}" alt="">' for n in wshots[1])}</div>
+        <a class="priv" href="{wos_privacy_for(code)}">{esc(w['privacy'])}</a>
       </div>
 
 {chr(10).join(cards)}
@@ -217,9 +249,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--src', required=True)
     ap.add_argument('--out', default='.')
+    ap.add_argument('--wos', required=True, help='папка docs/сайт проекта WakeOnStop')
     a = ap.parse_args()
     src, out = Path(a.src).expanduser(), Path(a.out).expanduser()
     strings = json.loads((src / 'site' / 'site_strings.json').read_text(encoding='utf-8'))
+    wos = json.loads((Path(a.wos).expanduser() / 'site_strings.json').read_text(encoding='utf-8'))
+    assert set(wos) == set(NAMES), 'набор языков WakeOnStop разошёлся с сайтом'
     if list((src / 'build' / 'site').glob('*.apk')):
         QRS.append(QR_APK)
     css = (out / 'tools' / 'site.css').read_text(encoding='utf-8')
@@ -240,9 +275,12 @@ def main():
         shots_dir = out / 'lambit2fa' / 'download' / 'shots'
         lang_dir = code if any((shots_dir / code).glob('*.jpg')) else 'en'
         shots = (lang_dir, sorted(f.name for f in (shots_dir / lang_dir).glob('*.jpg')))
+        wdir = out / 'wakeonstop' / 'download' / 'shots'
+        wlang = code if any((wdir / code).glob('*.jpg')) else 'en'
+        wshots = (wlang, sorted(f.name for f in (wdir / wlang).glob('*.jpg')))
         d = out / ('' if code == DEFAULT_LANG else code)
         d.mkdir(parents=True, exist_ok=True)
-        (d / 'index.html').write_text(page(code, t, strings[code], css, shots), encoding='utf-8')
+        (d / 'index.html').write_text(page(code, t, strings[code], css, shots, wos[code], wshots), encoding='utf-8')
         done.append(code)
     print('собрано:', ' '.join(done))
     if missing:

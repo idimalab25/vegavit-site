@@ -130,15 +130,18 @@
     .facts dd { margin-bottom: 10px; }
   }
 
-  /* плашка lambit2FA со скачиванием */
-  .card#lambit2fa { grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
-  .card#lambit2fa .plaque-main { flex: 1 1 320px; min-width: 260px; color: inherit; text-decoration: none; display: block; }
-  .card#lambit2fa .plaque-main:hover { text-decoration: none; }
-  .card#lambit2fa .plaque-main:hover h3 { color: var(--accent); }
-  .card#lambit2fa .dl-btn {
+  /* плашки программ со скачиванием: lambit2FA и WakeOnStop */
+  .card.plaque { grid-column: 1 / -1; display: flex; gap: 20px; flex-wrap: wrap; align-items: flex-start; }
+  .card.plaque .plaque-main { flex: 1 1 320px; min-width: 260px; color: inherit; text-decoration: none; display: block; }
+  .card.plaque .plaque-main:hover { text-decoration: none; }
+  .card.plaque .plaque-main:hover h3 { color: var(--accent); }
+  .card.plaque .dl-btn {
     display: inline-block; margin-top: 12px; background: var(--accent); color: #fff;
     border-radius: 9px; padding: 9px 18px; font-size: 14px; font-weight: 600;
   }
+  .plaque-head { display: flex; align-items: center; gap: 12px; margin-bottom: 6px; }
+  .plaque-head img { width: 64px; height: 64px; border-radius: 14px; flex: 0 0 auto; }
+  .plaque-head h3 { margin: 0; }
   .qrs { display: flex; gap: 12px; flex-wrap: wrap; }
   .qr { width: 104px; text-align: center; font-size: 11.5px; color: var(--text-soft); line-height: 1.3; }
   .qr img { display: block; width: 104px; height: 104px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 5px; }
@@ -204,7 +207,7 @@
     <div class="cards">
 
       <!-- lambit2FA: плашка со скачиванием, собирает tools/build_site.py -->
-      <div class="card" id="lambit2fa">
+      <div class="card plaque" id="lambit2fa">
         <a class="plaque-main" href="/lambit2fa/download/id/">
           <h3>lambit2FA — kode masuk dua langkah</h3>
           <p>Tersedia di semua platform: iPhone, iPad, Apple Watch, Mac, Android, jam Wear OS, Windows, Linux. Kode Anda tetap di tangan Anda.</p>
@@ -220,6 +223,22 @@
         <div class="scan-hint">Arahkan kamera ponsel ke kode QR</div>
         <div class="plaque-shots"><img src="/lambit2fa/download/shots/id/01-codes.jpg" alt=""><img src="/lambit2fa/download/shots/id/02-groups.jpg" alt=""><img src="/lambit2fa/download/shots/id/03-backups.jpg" alt=""><img src="/lambit2fa/download/shots/id/04-settings.jpg" alt=""><img src="/lambit2fa/download/shots/id/05-import.jpg" alt=""><img src="/lambit2fa/download/shots/id/06-export.jpg" alt=""></div>
         <a class="priv" href="/lambit2fa/privacy/id/">Kebijakan Privasi</a>
+      </div>
+
+      <!-- WakeOnStop: вторая программа, плашка того же устройства -->
+      <div class="card plaque" id="wakeonstop">
+        <a class="plaque-main" href="/wakeonstop/download/id/">
+          <div class="plaque-head">
+            <img src="/wakeonstop/icon/wakeonstop-180.png" srcset="/wakeonstop/icon/wakeonstop-512.png 2x" alt="" width="64" height="64">
+            <h3>WakeOnStop — jangan pernah terlewat halte</h3>
+          </div>
+          <p>Memberi tahu Anda beberapa menit sebelum stasiun Anda — di kereta, bus, dan trem. iPhone, Apple Watch, Android, jam Wear OS. Bekerja tanpa internet, lokasi Anda tetap di ponsel.</p>
+          <span class="dl-btn">Unduh</span>
+        </a>
+        <div class="qrs"><div class="qr"><img src="/wakeonstop/download/qr/iphone-app-store.svg" alt="iPhone dan Apple Watch — App Store" width="104" height="104"><span>iPhone dan Apple Watch — App Store</span></div><div class="qr"><img src="/wakeonstop/download/qr/android-google-play.svg" alt="Android dan jam Wear OS — Google Play" width="104" height="104"><span>Android dan jam Wear OS — Google Play</span></div></div>
+        <div class="scan-hint">Arahkan kamera ponsel ke kode QR</div>
+        <div class="plaque-shots"><img src="/wakeonstop/download/shots/id/1-trip.jpg" alt=""><img src="/wakeonstop/download/shots/id/2-search.jpg" alt=""><img src="/wakeonstop/download/shots/id/3-big.jpg" alt=""></div>
+        <a class="priv" href="/wakeonstop/privacy/en/">Kebijakan privasi</a>
       </div>
 
       <div class="card">
